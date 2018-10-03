@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import {Link} from 'gatsby'
 import ScrollProgress from '../ScrollProgress'
 import HeaderMenu from '../HeaderMenu'
 import PhoneList from '../PhoneList'

@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from '../components/HelmetWrapper'
 import ArticleHeaderImage from '../components/ArticleHeaderImage'
 import DoctorPreview from '../components/DoctorPreview'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 function Doctors({ data }) {
     return (
