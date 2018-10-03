@@ -51,7 +51,7 @@ module.exports = {
         },
 
         /*-----------------------------------------------------------------------------
-         * Articles Images   
+         * Articles Images
          *----------------------------------------------------------------------------*/
         {
             resolve: `gatsby-source-filesystem`,
@@ -102,7 +102,7 @@ module.exports = {
             resolve: `gatsby-plugin-sitemap`,
             options: {},
         },
-        `gatsby-plugin-react-next`,
+        // `gatsby-plugin-react-next`,
         `gatsby-transformer-sharp`,
         {
             resolve: `gatsby-plugin-google-analytics`,
