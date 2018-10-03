@@ -1,4 +1,5 @@
 import React from 'react'
+import {graphql} from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
@@ -23,7 +24,7 @@ HelmetWrapper.defaultProps = {}
 export default HelmetWrapper
 
 export const pageFragment = graphql`
-    fragment Helmet on RootQueryType {
+    fragment Helmet on Query {
         site {
             siteMetadata {
                 title

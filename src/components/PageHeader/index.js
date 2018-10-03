@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import {Link, graphql} from 'gatsby'
 import ScrollProgress from '../ScrollProgress'
 import HeaderMenu from '../HeaderMenu'
 import PhoneList from '../PhoneList'
@@ -104,7 +104,7 @@ PageHeader.defaultProps = {}
 export default PageHeader
 
 export const pageFragment = graphql`
-    fragment PageHeader on RootQueryType {
+    fragment PageHeader on Query {
         site {
             siteMetadata {
                 fixedPhone

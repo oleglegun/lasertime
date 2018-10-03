@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Radium from 'radium'
 import logo from './img/logo.jpg'
 
@@ -92,7 +92,7 @@ MobileMenu.defaultProps = {}
 export default MobileMenu
 
 export const pageFragment = graphql`
-    fragment MobileMenu on RootQueryType {
+    fragment MobileMenu on Query {
         site {
             siteMetadata {
                 menuItems {

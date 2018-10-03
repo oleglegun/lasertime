@@ -1,4 +1,5 @@
 import React from 'react'
+import {graphql} from 'gatsby'
 import Timeline, { TimelineItem } from '../../../components/Timeline'
 import Helmet from '../../../components/HelmetWrapper'
 import DoctorInfoPanel from '../../../components/DoctorInfoPanel'

@@ -17,6 +17,7 @@
         "gatsby-source-filesystem": "^2.0.12",
         "gatsby-transformer-remark": "^2.1.17",
         "gatsby-transformer-sharp": "^2.1.9",
+        "less": "^3.9.0",
         "normalize.css": "^8.0.1",
         "prop-types": "^15.6.2",
         "pure-react-carousel": "^1.17.0",

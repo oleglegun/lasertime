@@ -1,4 +1,5 @@
 import React from 'react'
+import {graphql} from 'gatsby'
 import Helmet from '../components/HelmetWrapper'
 import PagePreview from '../components/PagePreview'
 import InfoBlock from '../components/InfoBlock'

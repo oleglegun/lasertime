@@ -1,4 +1,5 @@
 import React from 'react'
+import {graphql} from 'gatsby'
 import Helmet from '../components/HelmetWrapper'
 import ActionList from '../components/ActionList'
 import fixtures from '../files/config/actions-fixtures'

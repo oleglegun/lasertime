@@ -1,4 +1,5 @@
 import React from 'react'
+import {graphql} from 'gatsby'
 import Helmet from '../components/HelmetWrapper'
 import InfoPanel from '../components/contacts/ContactsInfoPanel'
 import NavPanel from '../components/contacts/ContactsNavPanel'

@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Helmet from '../../../components/HelmetWrapper'
 import QuestionBlock from '../../../components/QuestionBlock'
 import ArticleAuthorBlock from '../../../components/ArticleAuthor'
@@ -136,7 +137,7 @@ export default function LaserEpilationInterview({ data }) {
                     волоса, и фолликула.
                 </p>
             </QuestionBlock>
-            <QuestionBlock question="А как женщине бороться с тёмными волосами над верхней губой, &quot;усиками&quot;? Эпиляция в таких зонах влияет на гормональный фон?">
+            <QuestionBlock question='А как женщине бороться с тёмными волосами над верхней губой, "усиками"? Эпиляция в таких зонах влияет на гормональный фон?'>
                 <p>
                     Эпиляция никак не влияет на гормональный фон! А с усиками
                     нужно бороться также как и с волосками в любой другой зоне.
