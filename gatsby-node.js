@@ -55,7 +55,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                         component: articleTemplate,
                         // Pass context for querying for HTML from the template
                         context: {
-                            path: edge.node.frontmatter.path,
+                            pagePath: edge.node.frontmatter.path,
                         },
                     })
                 })
