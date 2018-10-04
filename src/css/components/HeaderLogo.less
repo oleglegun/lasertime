@@ -26,15 +26,18 @@
     .PageHeader__logo--mask .PageHeader__logo--shine {
         position: relative;
     }
+
     .PageHeader__logo--mask .PageHeader__logo--shine {
         background-position: -260px 0;
     }
+
     .PageHeader__logo--mask .PageHeader__logo--shine:hover,
     .PageHeader__logo--mask .PageHeader__logo--shine:focus {
         background-position: 25px 0;
         /*change speed to see in slow motion*/
         transition: all 1s;
     }
+
     .PageHeader__logo--mask .PageHeader__logo--shine::after {
         content: '';
         position: absolute;
@@ -44,8 +47,7 @@
         right: 0;
         bottom: 0;
         background: radial-gradient(
-                0 0,
-                circle farthest-side,
+                circle farthest-side at 0 0,
                 rgba(255, 255, 255, 0) 90%,
                 rgba(255, 255, 255, 0.8) 98%,
                 rgba(255, 255, 255, 0) 100%
