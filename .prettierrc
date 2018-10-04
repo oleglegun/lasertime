@@ -11,9 +11,9 @@
         }
       },
       {
-        "files": "**/articles/*.js",
+        "files": "**/articles/*/*.js",
         "options": {
-          "printWidth": 1000
+          "printWidth": 140
         }
       }
     ]
