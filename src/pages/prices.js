@@ -1,12 +1,12 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import Helmet from '../components/HelmetWrapper'
-import PagePreview from '../components/PagePreview'
 import InfoBlock from '../components/InfoBlock'
 import ArticleHeaderImage from '../components/ArticleHeaderImage'
 import PriceList, { PriceListItem } from '../components/PriceList'
+import Layout from '../components/Layout'
 
-function PriceListPage({ data }) {
+function PriceListPage({data} ) {
     const pricelistElements = data.allMarkdownRemark.edges
         .sort((a, b) => {
             const aOrder = a.node.frontmatter.order
@@ -29,28 +29,41 @@ function PriceListPage({ data }) {
         })
 
     return (
-        <div>
-            <Helmet data={data} title="Цены" description="" keywords="" />
+        <Layout>
+            <StaticQuery
+                query={pageQuery}
+                render={data => (
+                    <div>
+                        <Helmet
+                            data={data}
+                            title="Цены"
+                            description=""
+                            keywords=""
+                        />
 
-            <ArticleHeaderImage
-                title={'Цены'}
-                imgSizes={data.blank.sizes}
-                alignLeft
-                noEffects
+                        <ArticleHeaderImage
+                            title={'Цены'}
+                            imgSizes={data.blank.fluid}
+                            alignLeft
+                            noEffects
+                        />
+                        <div className="PageContent__wrapper">
+                            <InfoBlock color="red">
+                                <p>
+                                    Внимание, цены на сайте представлены только
+                                    для предварительного ознакомления! Цены на
+                                    высококачественные европейские препараты
+                                    постоянно корректируются. Уточняйте
+                                    актуальную информацию по ценам у нашего
+                                    администратора.
+                                </p>
+                            </InfoBlock>
+                            <PriceList>{pricelistElements}</PriceList>
+                        </div>
+                    </div>
+                )}
             />
-            <div className="PageContent__wrapper">
-                <InfoBlock color="red">
-                    <p>
-                        Внимание, цены на сайте представлены только для
-                        предварительного ознакомления! Цены на
-                        высококачественные европейские препараты постоянно
-                        корректируются. Уточняйте актуальную информацию по ценам
-                        у нашего администратора.
-                    </p>
-                </InfoBlock>
-                <PriceList>{pricelistElements}</PriceList>
-            </div>
-        </div>
+        </Layout>
     )
 }
 
@@ -62,9 +75,11 @@ export default PriceListPage
 export const pageQuery = graphql`
     query Prices {
         ...Helmet
-        blank: imageSharp(id: { regex: "/prices-header/" }) {
-            sizes(maxWidth: 960, quality: 65) {
-                ...GatsbyImageSharpSizes_noBase64
+        blank: imageSharp(
+            fluid: { originalName: { regex: "/prices-header/" } }
+        ) {
+            fluid(maxWidth: 960, quality: 65) {
+                ...GatsbyImageSharpFluid_noBase64
             }
         }
         allMarkdownRemark(filter: { fields: { group: { eq: "prices" } } }) {
