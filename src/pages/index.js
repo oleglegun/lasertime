@@ -38,7 +38,7 @@ class IndexPage extends React.Component {
                                 className={'Slider'}
                                 naturalSlideWidth={96}
                                 naturalSlideHeight={40}
-                                hasMasterSpinner={this.state.isSpinning}
+                                hasMasterSpinner={false}
                                 totalSlides={4}
                             >
                                 <Slider>
@@ -235,32 +235,38 @@ export const pageQuery = graphql`
                 keywords
             }
         }
-        indexSlideBeauty: imageSharp(id: { regex: "/index-slide-beauty/" }) {
+        indexSlideBeauty: imageSharp(
+            fluid: { originalName: { regex: "/index-slide-beauty/" } }
+        ) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
         }
 
-        indexSlideYouth: imageSharp(id: { regex: "/index-slide-youth/" }) {
+        indexSlideYouth: imageSharp(
+            fluid: { originalName: { regex: "/index-slide-youth/" } }
+        ) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
         }
 
-        indexSlideQuality: imageSharp(id: { regex: "/index-slide-quality/" }) {
+        indexSlideQuality: imageSharp(
+            fluid: { originalName: { regex: "/index-slide-quality/" } }
+        ) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
         }
         indexSlideFreshness: imageSharp(
-            id: { regex: "/index-slide-freshness/" }
+            fluid: { originalName: { regex: "/index-slide-freshness/" } }
         ) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
         }
         indexTestimonialsBg: imageSharp(
-            id: { regex: "/index-testimonials-bg/" }
+            fluid: { originalName: { regex: "/index-testimonials-bg/" } }
         ) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
