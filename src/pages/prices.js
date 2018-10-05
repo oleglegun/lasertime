@@ -6,7 +6,7 @@ import ArticleHeaderImage from '../components/ArticleHeaderImage'
 import PriceList, { PriceListItem } from '../components/PriceList'
 import Layout from '../components/Layout'
 
-function PriceListPage({data} ) {
+function PriceListPage({ data }) {
     const pricelistElements = data.allMarkdownRemark.edges
         .sort((a, b) => {
             const aOrder = a.node.frontmatter.order
@@ -30,39 +30,28 @@ function PriceListPage({data} ) {
 
     return (
         <Layout>
-            <StaticQuery
-                query={pageQuery}
-                render={data => (
-                    <div>
-                        <Helmet
-                            data={data}
-                            title="Цены"
-                            description=""
-                            keywords=""
-                        />
+            <div>
+                <Helmet data={data} title="Цены" description="" keywords="" />
 
-                        <ArticleHeaderImage
-                            title={'Цены'}
-                            imgSizes={data.blank.fluid}
-                            alignLeft
-                            noEffects
-                        />
-                        <div className="PageContent__wrapper">
-                            <InfoBlock color="red">
-                                <p>
-                                    Внимание, цены на сайте представлены только
-                                    для предварительного ознакомления! Цены на
-                                    высококачественные европейские препараты
-                                    постоянно корректируются. Уточняйте
-                                    актуальную информацию по ценам у нашего
-                                    администратора.
-                                </p>
-                            </InfoBlock>
-                            <PriceList>{pricelistElements}</PriceList>
-                        </div>
-                    </div>
-                )}
-            />
+                <ArticleHeaderImage
+                    title={'Цены'}
+                    imgSizes={data.blank.fluid}
+                    alignLeft
+                    noEffects
+                />
+                <div className="PageContent__wrapper">
+                    <InfoBlock color="red">
+                        <p>
+                            Внимание, цены на сайте представлены только для
+                            предварительного ознакомления! Цены на
+                            высококачественные европейские препараты постоянно
+                            корректируются. Уточняйте актуальную информацию по
+                            ценам у нашего администратора.
+                        </p>
+                    </InfoBlock>
+                    <PriceList>{pricelistElements}</PriceList>
+                </div>
+            </div>
         </Layout>
     )
 }
