@@ -18,7 +18,6 @@ import Layout from '../../../components/Layout'
 function ContourCorrectionService({ data }) {
     return (
         <Layout>
-            <div>
                 <Helmet data={data} title="Контурная пластика" description="" />
                 <ArticleHeaderImage title="Контурная пластика" imgSizes={data.contourCorrectionServiceHeader.fluid} />
                 <div className="PageContent__wrapper">
@@ -680,7 +679,6 @@ function ContourCorrectionService({ data }) {
                         <p>Побочные эффекты после инъекций возникают редко, но иногда пациенты жалуются на боль в месте укола, небольшой отек и воспаление мягких тканей, которое проходит самостоятельно в течение 1-3 дней.</p>
                     </InfoBlock>
                 </div>
-            </div>
         </Layout>
     )
 }

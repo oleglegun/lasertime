@@ -16,7 +16,6 @@ import Layout from "../../../components/Layout"
 function LiftingInfiniService({ data }) {
     return (
         <Layout>
-            <div>
                 <Helmet data={data} title="Удаление сосудов с помощью КТП лазера" description="" />
 
                 <ArticleHeaderImage title="Лазерное удаление сосудов" imgSizes={data.ktpLaserServiceHeader.fluid} />
@@ -147,7 +146,6 @@ function LiftingInfiniService({ data }) {
                         </List>
                     </InfoPanel>
                 </div>
-            </div>
         </Layout>
     )
 }

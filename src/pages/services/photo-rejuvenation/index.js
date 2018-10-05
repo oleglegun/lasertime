@@ -13,15 +13,16 @@ import FloatBlock from '../../../components/FloatBlock/index'
 import ServiceStats from '../../../components/ServiceStats'
 import ArticleHeaderImage from '../../../components/ArticleHeaderImage'
 import Anchor from '../../../components/Anchor'
+import Layout from "../../../components/Layout"
 
 function PhotoRejuvenationService({ data }) {
     return (
-        <div>
+        <Layout>
             <Helmet data={data} title="Фотоомоложение" description="" />
 
             <ArticleHeaderImage
                 title="Фотоомоложение"
-                imgSizes={data.photoRejuvenationServiceHeader.sizes}
+                imgSizes={data.photoRejuvenationServiceHeader.fluid}
             />
             <div className="PageContent__wrapper">
                 <FloatBlock right oneThird>
@@ -432,7 +433,7 @@ function PhotoRejuvenationService({ data }) {
                     </InfoBlock>
                 </InfoPanel>
             </div>
-        </div>
+        </Layout>
     )
 }
 
@@ -442,10 +443,10 @@ export const pageQuery = graphql`
     query PhotoRejuvenationServiceQuery {
         ...Helmet
         photoRejuvenationServiceHeader: imageSharp(
-            id: { regex: "/photo-rejuvenation-service-header/" }
+            fluid: { originalName: { regex: "/photo-rejuvenation-service-header/" }}
         ) {
-            sizes(maxWidth: 960) {
-                ...GatsbyImageSharpSizes_noBase64
+            fluid(maxWidth: 960) {
+...GatsbyImageSharpFluid_noBase64
             }
         }
     }

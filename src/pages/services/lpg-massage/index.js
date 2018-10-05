@@ -12,12 +12,13 @@ import ServiceStats from '../../../components/ServiceStats'
 import ArticleHeaderImage from '../../../components/ArticleHeaderImage'
 import Anchor from '../../../components/Anchor'
 import InlineHighlight from '../../../components/InlineHighlight'
+import Layout from "../../../components/Layout"
 
 function LaserRejuvenationService({ data }) {
     return (
-        <div>
+        <Layout>
             <Helmet data={data} title="LPG массаж" description="" />
-            <ArticleHeaderImage title="LPG массаж" imgSizes={data.LPGMassageServiceHeader.sizes} />
+            <ArticleHeaderImage title="LPG массаж" imgSizes={data.LPGMassageServiceHeader.fluid} />
 
             <div className="PageContent__wrapper">
                 <FloatBlock right oneThird>
@@ -151,7 +152,7 @@ function LaserRejuvenationService({ data }) {
                     <p>В нашей клинике есть профессиональный аппарат для прессотерапии и лимфодренажа Lympha-Tron (Лимфатрон), обладающий регистрационным удостоверением Минздрава РФ.</p>
                 </InfoPanel>
             </div>
-        </div>
+        </Layout>
     )
 }
 
@@ -160,9 +161,9 @@ export default LaserRejuvenationService
 export const pageQuery = graphql`
     query LPGMassageServiceQuery {
         ...Helmet
-        LPGMassageServiceHeader: imageSharp(id: { regex: "/lpg-massage-service-header/" }) {
-            sizes(maxWidth: 960) {
-                ...GatsbyImageSharpSizes_noBase64
+        LPGMassageServiceHeader: imageSharp(fluid: { originalName: { regex: "/lpg-massage-service-header/" }}) {
+            fluid(maxWidth: 960) {
+...GatsbyImageSharpFluid_noBase64
             }
         }
     }

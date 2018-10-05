@@ -12,11 +12,11 @@ import FloatBlock from '../../../components/FloatBlock/index'
 import ServiceStats from '../../../components/ServiceStats'
 import ArticleHeaderImage from '../../../components/ArticleHeaderImage'
 import Anchor from '../../../components/Anchor'
+import Layout from "../../../components/Layout"
 
 function LaserEpilationService({ data }) {
     return (
         <Layout>
-            <div>
                 <Helmet data={data} title="Лазерная эпиляция" description="" />
 
                 <ArticleHeaderImage title="Лазерная эпиляция" imgSizes={data.laserEpilationServiceHeader.fluid} />
@@ -205,7 +205,6 @@ function LaserEpilationService({ data }) {
                         </List>
                     </InfoPanel>
                 </div>
-            </div>
         </Layout>
     )
 }

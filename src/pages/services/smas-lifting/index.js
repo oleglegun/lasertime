@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from '../../../components/HelmetWrapper'
 import InfoPanel from '../../../components/InfoPanel/index'
 import List from '../../../components/List/index'
@@ -13,12 +13,13 @@ import Anchor from '../../../components/Anchor'
 import PullQuote from '../../../components/PullQuote'
 import Heading from '../../../components/Heading'
 import QuestionBlock from '../../../components/QuestionBlock'
+import Layout from '../../../components/Layout'
 
 function SmasLiftingService({ data }) {
     return (
-        <div>
+        <Layout>
             <Helmet data={data} title="SMAS лифтинг Doublo" description="" />
-            <ArticleHeaderImage title="SMAS лифтинг" imgSizes={data.smasLiftingServiceHeader.sizes} />
+            <ArticleHeaderImage title="SMAS лифтинг" imgSizes={data.smasLiftingServiceHeader.fluid} />
 
             <div className="PageContent__wrapper">
                 <FloatBlock right oneThird>
@@ -153,7 +154,7 @@ function SmasLiftingService({ data }) {
 
                 <Anchor id="q&a" />
                 <Heading titleH2="Ответы на частые вопросы" type="line" />
-                <QuestionBlock question="Насколько болезненная процедура СМАС лифтинга на аппарате &quot;Doublo&quot;">
+                <QuestionBlock question='Насколько болезненная процедура СМАС лифтинга на аппарате "Doublo"'>
                     <p>Процедура делается без анестезии и переносится пациентом хорошо, во время манипуляции вы можете почувствовать небольшой дискомфорт в подчелюстной области.</p>
                 </QuestionBlock>
                 <QuestionBlock question="В чем различия между аппаратами для ультразвукового SMAS-лифтинга: Doublo и Ulthera System?">
@@ -180,7 +181,7 @@ function SmasLiftingService({ data }) {
                     <p>Цена за SMAS лифтинг лица с подчелюстной зоной составляет от 80 000 рублей, но во время проведения акций центра действует 50% скидка - цена 40 000 рублей!</p>
                 </QuestionBlock>
             </div>
-        </div>
+        </Layout>
     )
 }
 
@@ -189,9 +190,9 @@ export default SmasLiftingService
 export const pageQuery = graphql`
     query SmasLiftingServiceQuery {
         ...Helmet
-        smasLiftingServiceHeader: imageSharp(id: { regex: "/smas-lifting-service-header/" }) {
-            sizes(maxWidth: 960) {
-                ...GatsbyImageSharpSizes_noBase64
+        smasLiftingServiceHeader: imageSharp(fluid: { originalName: { regex: "/smas-lifting-service-header/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
             }
         }
     }
