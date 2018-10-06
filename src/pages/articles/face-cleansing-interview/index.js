@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from '../../../components/HelmetWrapper'
 import QuestionBlock from '../../../components/QuestionBlock'
 import ArticleAuthorBlock from '../../../components/ArticleAuthor'
@@ -10,9 +10,6 @@ import Layout from '../../../components/Layout'
 export default function FaceCleansingInterview({ data }) {
     return (
         <Layout>
-            <StaticQuery
-                query={pageQuery}
-                render={data => (
                     <div className="PageContent__wrapper">
                         <Helmet
                             data={data}
@@ -573,8 +570,6 @@ export default function FaceCleansingInterview({ data }) {
                             </p>
                         </QuestionBlock>
                     </div>
-                )}
-            />
         </Layout>
     )
 }

@@ -1,35 +1,30 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from '../components/HelmetWrapper'
 import ActionList from '../components/ActionList'
 import fixtures from '../files/config/actions-fixtures'
 import ArticleHeaderImage from '../components/ArticleHeaderImage'
 import Layout from '../components/Layout'
 
-function Actions() {
+function Actions({ data }) {
     const { actions, categories, groups } = fixtures
 
     return (
         <Layout>
-            <StaticQuery
-                query={pageQuery}
-                render={data => (
-                    <div className="">
-                        <Helmet data={data} title="Акции" description="" />
-                        <ArticleHeaderImage
-                            title={'Акции'}
-                            imgSizes={data.contactsHeader.fluid}
-                            alignRight
-                            noEffects
-                        />
-                        <ActionList
-                            items={actions}
-                            categories={categories}
-                            groups={groups}
-                        />
-                    </div>
-                )}
-            />
+            <div className="">
+                <Helmet data={data} title="Акции" description="" />
+                <ArticleHeaderImage
+                    title={'Акции'}
+                    imgSizes={data.contactsHeader.fluid}
+                    alignRight
+                    noEffects
+                />
+                <ActionList
+                    items={actions}
+                    categories={categories}
+                    groups={groups}
+                />
+            </div>
         </Layout>
     )
 }

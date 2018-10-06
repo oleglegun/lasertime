@@ -1,95 +1,73 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from '../components/HelmetWrapper'
 import ServiceGrid, { ServiceGridItem } from '../components/ServiceGrid'
 import ArticleHeaderImage from '../components/ArticleHeaderImage'
 import Layout from '../components/Layout'
 
-function Services() {
+function Services({ data }) {
     return (
         <Layout>
-            <StaticQuery
-                query={pageQuery}
-                render={data => (
-                    <div>
-                        <Helmet data={data} title={'Услуги'} description="" />
+            <div>
+                <Helmet data={data} title={'Услуги'} description="" />
 
-                        <ArticleHeaderImage
-                            title={'Услуги'}
-                            imgSizes={data.servicesHeader.fluid}
-                            alignRight
-                            noEffects
+                <ArticleHeaderImage
+                    title={'Услуги'}
+                    imgSizes={data.servicesHeader.fluid}
+                    alignRight
+                    noEffects
+                />
+
+                <div className="PageContent__wrapper">
+                    <ServiceGrid>
+                        <ServiceGridItem
+                            title="Лазерная эпиляция"
+                            link="/services/laser-epilation"
+                            imgSizes={data.laserEpilationServiceHeader.fluid}
                         />
-
-                        <div className="PageContent__wrapper">
-                            <ServiceGrid>
-                                <ServiceGridItem
-                                    title="Лазерная эпиляция"
-                                    link="/services/laser-epilation"
-                                    imgSizes={
-                                        data.laserEpilationServiceHeader.fluid
-                                    }
-                                />
-                                <ServiceGridItem
-                                    title="3D лифтинг INFINI®"
-                                    link="/services/3d-lifting-infini"
-                                    imgSizes={
-                                        data.liftingInfiniServiceHeader.fluid
-                                    }
-                                />
-                                <ServiceGridItem
-                                    title="Лазерное омоложение"
-                                    link="/services/laser-rejuvenation"
-                                    imgSizes={
-                                        data.laserRejuvenationServiceHeader
-                                            .fluid
-                                    }
-                                />
-                                <ServiceGridItem
-                                    title="Фотоомоложение"
-                                    link="/services/photo-rejuvenation"
-                                    imgSizes={
-                                        data.photoRejuvenationServiceHeader
-                                            .fluid
-                                    }
-                                />
-                                <ServiceGridItem
-                                    title="Удаление сосудов"
-                                    link="/services/ktp-laser"
-                                    imgSizes={data.KTPLaserServiceHeader.fluid}
-                                />
-                                <ServiceGridItem
-                                    title="Контурная пластика"
-                                    link="/services/contour-correction"
-                                    imgSizes={
-                                        data.ContourCorrectionServiceHeader
-                                            .fluid
-                                    }
-                                />
-                                <ServiceGridItem
-                                    title="LPG массаж"
-                                    link="/services/lpg-massage"
-                                    imgSizes={
-                                        data.LPGMassageServiceHeader.fluid
-                                    }
-                                />
-                                <ServiceGridItem
-                                    title="Ботулотоксины"
-                                    link="/services/botox"
-                                    imgSizes={data.BotoxServiceHeader.fluid}
-                                />
-                                <ServiceGridItem
-                                    title="SMAS лифтинг"
-                                    link="/services/smas-lifting"
-                                    imgSizes={
-                                        data.SmasLiftingServiceHeader.fluid
-                                    }
-                                />
-                            </ServiceGrid>
-                        </div>
-                    </div>
-                )}
-            />
+                        <ServiceGridItem
+                            title="3D лифтинг INFINI®"
+                            link="/services/3d-lifting-infini"
+                            imgSizes={data.liftingInfiniServiceHeader.fluid}
+                        />
+                        <ServiceGridItem
+                            title="Лазерное омоложение"
+                            link="/services/laser-rejuvenation"
+                            imgSizes={data.laserRejuvenationServiceHeader.fluid}
+                        />
+                        <ServiceGridItem
+                            title="Фотоомоложение"
+                            link="/services/photo-rejuvenation"
+                            imgSizes={data.photoRejuvenationServiceHeader.fluid}
+                        />
+                        <ServiceGridItem
+                            title="Удаление сосудов"
+                            link="/services/ktp-laser"
+                            imgSizes={data.KTPLaserServiceHeader.fluid}
+                        />
+                        <ServiceGridItem
+                            title="Контурная пластика"
+                            link="/services/contour-correction"
+                            imgSizes={data.ContourCorrectionServiceHeader.fluid}
+                        />
+                        <ServiceGridItem
+                            title="LPG массаж"
+                            link="/services/lpg-massage"
+                            imgSizes={data.LPGMassageServiceHeader.fluid}
+                        />
+                        <ServiceGridItem
+                            title="Ботулотоксины"
+                            link="/services/botox"
+                            imgSizes={data.BotoxServiceHeader.fluid}
+                        />
+                        <ServiceGridItem
+                            title="SMAS лифтинг"
+                            link="/services/smas-lifting"
+                            imgSizes={data.SmasLiftingServiceHeader.fluid}
+                        />
+                    </ServiceGrid>
+                </div>
+            </div>
         </Layout>
     )
 }

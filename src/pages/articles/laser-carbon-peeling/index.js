@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from '../../../components/HelmetWrapper'
 import PullQuote from '../../../components/PullQuote'
 import FloatBlock from '../../../components/FloatBlock'
@@ -9,12 +9,9 @@ import List from '../../../components/List'
 import Img from 'gatsby-image'
 import Layout from '../../../components/Layout'
 
-export default function LaserCarbonPeelingArticle() {
+export default function LaserCarbonPeelingArticle({data}) {
     return (
         <Layout>
-            <StaticQuery
-                query={pageQuery}
-                render={data => (
                     <div className="PageContent__wrapper">
                         <Helmet data={data} title="Лазерный карбоновый пилинг" description="" />
                         <Heading titleH1="Лазерный карбоновый пилинг" type="underline" />
@@ -136,8 +133,6 @@ export default function LaserCarbonPeelingArticle() {
                             долгосрочного эффекта косметологи рекомендуют проводить процедуру регулярно.
                         </p>
                     </div>
-                )}
-            />
         </Layout>
     )
 }

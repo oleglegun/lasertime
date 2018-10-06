@@ -2,8 +2,8 @@ const path = require('path')
 
 const articleTemplatePath = `src/templates/article.js`
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-    const { createNodeField } = boundActionCreators
+exports.onCreateNode = ({ node, actions, getNode }) => {
+    const { createNodeField } = actions
 
     // Create node field `group` for each MD file
     // which will be used for filtering in GraphQL Queries

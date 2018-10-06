@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from '../components/HelmetWrapper'
 import InfoBlock from '../components/InfoBlock'
 import ArticleHeaderImage from '../components/ArticleHeaderImage'

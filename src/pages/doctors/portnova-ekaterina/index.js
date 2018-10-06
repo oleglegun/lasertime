@@ -1,17 +1,14 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import Timeline, { TimelineItem } from '../../../components/Timeline'
 import Helmet from '../../../components/HelmetWrapper'
 import DoctorInfoPanel from '../../../components/DoctorInfoPanel'
 import certificates from './portnova-ekaterina-certificates.pdf'
 import Layout from '../../../components/Layout'
 
-function PortnovaEkaterinaDoctor( ) {
+function PortnovaEkaterinaDoctor({data} ) {
     return (
         <Layout>
-            <StaticQuery
-                query={pageQuery}
-                render={data => (
                     <div>
                         <Helmet
                             data={data}
@@ -157,8 +154,6 @@ function PortnovaEkaterinaDoctor( ) {
                             />
                         </Timeline>
                     </div>
-                )}
-            />
         </Layout>
     )
 }

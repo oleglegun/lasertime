@@ -1,15 +1,12 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from '../../components/HelmetWrapper'
 import Heading from '../../components/Heading'
 import Layout from '../../components/Layout'
 
-export default function LiftingInfiniArticle() {
+export default function LiftingInfiniArticle({data}) {
     return (
         <Layout>
-            <StaticQuery
-                query={pageQuery}
-                render={data => (
                     <div className="PageContent__wrapper">
                         <Helmet
                             data={data}
@@ -266,8 +263,6 @@ export default function LiftingInfiniArticle() {
                             <li>Здоровая и подтянутая кожа на теле.</li>
                         </ul>
                     </div>
-                )}
-            />
         </Layout>
     )
 }

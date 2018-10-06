@@ -1,17 +1,14 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from '../components/HelmetWrapper'
 import InfoPanel from '../components/contacts/ContactsInfoPanel'
 import NavPanel from '../components/contacts/ContactsNavPanel'
 import ArticleHeaderImage from '../components/ArticleHeaderImage'
 import Layout from '../components/Layout'
 
-function Contacts() {
+function Contacts({data}) {
     return (
         <Layout>
-            <StaticQuery
-                query={pageQuery}
-                render={data => (
                     <div>
                         <Helmet data={data} title="Контакты" description="" />
                         <ArticleHeaderImage
@@ -25,8 +22,6 @@ function Contacts() {
                             <NavPanel />
                         </div>
                     </div>
-                )}
-            />
         </Layout>
     )
 }

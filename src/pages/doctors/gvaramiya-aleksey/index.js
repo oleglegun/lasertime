@@ -1,17 +1,14 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import Timeline, { TimelineItem } from '../../../components/Timeline'
 import Helmet from '../../../components/HelmetWrapper'
 import DoctorInfoPanel from '../../../components/DoctorInfoPanel'
 import certificates from './gvaramiya-aleksey-certificates.pdf'
 import Layout from '../../../components/Layout'
 
-function GvaramiyaAlekseyDoctor() {
+function GvaramiyaAlekseyDoctor({data}) {
     return (
         <Layout>
-            <StaticQuery
-                query={pageQuery}
-                render={data => (
                     <div>
                         <Helmet
                             data={data}
@@ -90,8 +87,6 @@ function GvaramiyaAlekseyDoctor() {
                             />
                         </Timeline>
                     </div>
-                )}
-            />
         </Layout>
     )
 }
