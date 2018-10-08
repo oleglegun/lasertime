@@ -24,6 +24,11 @@ module.exports = {
             ],
         },
     },
+    
+    proxy: {
+      prefix: "/api",
+      url: "https://lt-admin.ru"  
+    },
 
     plugins: [
         'gatsby-plugin-less',

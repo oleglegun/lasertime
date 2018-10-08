@@ -2,13 +2,23 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from '../components/HelmetWrapper'
 import ActionList from '../components/ActionList'
-import { actions } from '../files/config/fixtures'
 import ArticleHeaderImage from '../components/ArticleHeaderImage'
 import Layout from '../components/Layout'
 
 class Actions extends React.Component {
+    state = {
+        isLoading: false,
+        entities: [],
+    }
     componentDidMount() {
-        window.fetch('http://10.0.1.2:30000').then(console.log)
+        window
+            .fetch('https://lt-admin.ru/api/v1/actions/current')
+            .then(response => response.json())
+            .then(actionList =>
+                this.setState({
+                    entities: actionList,
+                })
+            )
     }
 
     render() {
@@ -24,11 +34,13 @@ class Actions extends React.Component {
                         alignRight
                         noEffects
                     />
-                    <ActionList
-                        items={actions}
-                        // categories={categories}
-                        // groups={groups}
-                    />
+                    {this.state.entities.length ? (
+                        <ActionList items={this.state.entities} />
+                    ) : (
+                        <h2 align="center">
+                            В данный момент активных акций нет
+                        </h2>
+                    )}
                 </div>
             </Layout>
         )

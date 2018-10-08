@@ -40,7 +40,8 @@
     "scripts": {
         "build": "gatsby build",
         "clean": "rm -r public/ .cache/",
-        "deploy": "yarn run build && ./scripts/upload-vscale.sh",
+        "deploy": "yarn run build && yarn run upload",
+        "upload": "./scripts/upload-vscale.sh",
         "develop": "yarn run clean && gatsby develop",
         "format": "prettier --config .prettierrc --write 'src/**/*.js'",
         "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
