@@ -18,13 +18,15 @@ function ArticleList({ data }) {
                 />
 
                 <div className="PageContent__wrapper">
-                    {/*<ArticlePreview*/}
-                    {/*title={'Филлеры RENAISSANCE (Израиль)'}*/}
-                    {/*path={'/articles/renaissance-fillers/'}*/}
-                    {/*imageSizes={data.LPGMassageArticle.fluid}*/}
-                    {/*description={''}*/}
-                    {/*type={'article'}*/}
-                    {/*/>*/}
+                    <ArticlePreview
+                        title={'Филлеры RENAISSANCE (Израиль)'}
+                        path={'/articles/renaissance-fillers/'}
+                        imageSizes={data.RenaissanceFillersArticle.fluid}
+                        description={
+                            'Препараты контурной пластики из Израиля являются достойным и относительно безопасным выбором на пути к омоложению и коррекции внешности.'
+                        }
+                        type={'article'}
+                    />
                     <ArticlePreview
                         title={'LPG-массаж или подтяжка лица без операции'}
                         path={'/articles/lpg-massage/'}
@@ -308,6 +310,13 @@ export const pageQuery = graphql`
             }
         }
         # Preview images
+        RenaissanceFillersArticle: imageSharp(
+            fluid: { originalName: { regex: "/renaissance-fillers-article/" } }
+        ) {
+            fluid(maxWidth: 180) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
         LPGMassageArticle: imageSharp(
             fluid: { originalName: { regex: "/lpg-massage-article/" } }
         ) {
