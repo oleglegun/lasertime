@@ -1,37 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function ActionSortBar({ sortType, changeSortType }) {
+function ActionSortBar({ sortType, changeSortType, sortTypeEnum }) {
     const baseClass = 'ActionSortBar__toggle'
-    const defaultClass =
+    const typeClass =
         baseClass +
-        (sortType === 'default' ? ' ActionSortBar__toggle--active' : '')
+        (sortType === sortTypeEnum.TYPE ? ' ActionSortBar__toggle--active' : '')
     const discountClass =
         baseClass +
-        (sortType === 'discount' ? ' ActionSortBar__toggle--active' : '')
+        (sortType === sortTypeEnum.DISCOUNT ? ' ActionSortBar__toggle--active' : '')
     const priceClass =
         baseClass +
-        (sortType === 'price' ? ' ActionSortBar__toggle--active' : '')
+        (sortType === sortTypeEnum.PRICE ? ' ActionSortBar__toggle--active' : '')
 
     return (
         <div className="ActionSortBar">
             <div className="ActionSortBar__wrapper">
                 <div className="ActionSortBar__title">Сортировка:</div>
                 <div
-                    className={defaultClass}
-                    onClick={() => changeSortType('default')}
+                    className={typeClass}
+                    onClick={() => changeSortType(sortTypeEnum.TYPE)}
                 >
                     по типу
                 </div>
                 <div
                     className={discountClass}
-                    onClick={() => changeSortType('discount')}
+                    onClick={() => changeSortType(sortTypeEnum.DISCOUNT)}
                 >
                     по выгоде
                 </div>
                 <div
                     className={priceClass}
-                    onClick={() => changeSortType('price')}
+                    onClick={() => changeSortType(sortTypeEnum.PRICE)}
                 >
                     по цене
                 </div>
@@ -43,6 +43,7 @@ function ActionSortBar({ sortType, changeSortType }) {
 ActionSortBar.propTypes = {
     sortType: PropTypes.string.isRequired,
     changeSortType: PropTypes.func.isRequired,
+    sortTypeEnum: PropTypes.object.isRequired,
 }
 ActionSortBar.defaultProps = {}
 

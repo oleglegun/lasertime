@@ -2,31 +2,37 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from '../components/HelmetWrapper'
 import ActionList from '../components/ActionList'
-import fixtures from '../files/config/actions-fixtures'
+import { actions } from '../files/config/fixtures'
 import ArticleHeaderImage from '../components/ArticleHeaderImage'
 import Layout from '../components/Layout'
 
-function Actions({ data }) {
-    const { actions, categories, groups } = fixtures
+class Actions extends React.Component {
+    componentDidMount() {
+        window.fetch('http://10.0.1.2:30000').then(console.log)
+    }
 
-    return (
-        <Layout>
-            <div className="">
-                <Helmet data={data} title="Акции" description="" />
-                <ArticleHeaderImage
-                    title={'Акции'}
-                    imgSizes={data.contactsHeader.fluid}
-                    alignRight
-                    noEffects
-                />
-                <ActionList
-                    items={actions}
-                    categories={categories}
-                    groups={groups}
-                />
-            </div>
-        </Layout>
-    )
+    render() {
+        const { data } = this.props
+
+        return (
+            <Layout>
+                <div className="">
+                    <Helmet data={data} title="Акции" description="" />
+                    <ArticleHeaderImage
+                        title={'Акции'}
+                        imgSizes={data.contactsHeader.fluid}
+                        alignRight
+                        noEffects
+                    />
+                    <ActionList
+                        items={actions}
+                        // categories={categories}
+                        // groups={groups}
+                    />
+                </div>
+            </Layout>
+        )
+    }
 }
 
 export default Actions
