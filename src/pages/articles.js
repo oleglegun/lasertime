@@ -19,6 +19,15 @@ function ArticleList({ data }) {
 
                 <div className="PageContent__wrapper">
                     <ArticlePreview
+                        title={'ДНК тесты'}
+                        path={'/articles/dna-test/'}
+                        imageSizes={data.DNATestArticle.fluid}
+                        description={
+                            'Гены — главный ключ к тайнам красоты и молодости! Следуя рекомендациям, составленным на основе результатов индивидуального ДНК-теста можно предотвратить возрастные изменения ДО их видимого проявления.'
+                        }
+                        type={'article'}
+                    />
+                    <ArticlePreview
                         title={'Филлеры RENAISSANCE (Израиль)'}
                         path={'/articles/renaissance-fillers/'}
                         imageSizes={data.RenaissanceFillersArticle.fluid}
@@ -310,6 +319,13 @@ export const pageQuery = graphql`
             }
         }
         # Preview images
+        DNATestArticle: imageSharp(
+            fluid: { originalName: { regex: "/dna-test-article/" } }
+        ) {
+            fluid(maxWidth: 180) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
         RenaissanceFillersArticle: imageSharp(
             fluid: { originalName: { regex: "/renaissance-fillers-article/" } }
         ) {
