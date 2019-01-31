@@ -65,6 +65,16 @@ function Services({ data }) {
                             link="/services/smas-lifting"
                             imgSizes={data.SmasLiftingServiceHeader.fluid}
                         />
+                        <ServiceGridItem
+                            title="Биоимпеданс"
+                            link="/services/bioimpedance"
+                            imgSizes={data.SmasLiftingServiceHeader.fluid}
+                        />
+                        <ServiceGridItem
+                            title="Диагностика OligoScan"
+                            link="/services/oligoscan"
+                            imgSizes={data.SmasLiftingServiceHeader.fluid}
+                        />
                     </ServiceGrid>
                 </div>
             </div>
