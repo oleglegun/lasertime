@@ -18,8 +18,8 @@ import Heading from '../../../components/Heading'
 function OligoScanService({ data }) {
     return (
         <Layout>
-            <Helmet data={data} title="OligoScan" description="" />
-            <ArticleHeaderImage title="OligoScan" imgSizes={data.OligoScanServiceHeader.fluid} />
+            <Helmet data={data} title="Диагностика OligoScan" description="" />
+            <ArticleHeaderImage title="Диагностика OligoScan" imgSizes={data.OligoScanServiceHeader.fluid} />
 
             <div className="PageContent__wrapper">
                 <FloatBlock right oneThird>
@@ -29,6 +29,10 @@ function OligoScanService({ data }) {
                         <a href="#theory">Принцип работы</a>
                         <a href="#advantages">Преимущества процедуры</a>
                         <a href="#indications">Показания к процедуре</a>
+                        <a href="#indications">Показания к процедуре</a>
+                        <a href="#minerals">20 минералов</a>
+                        <a href="#metals">14 токсичных металллов</a>
+                        <a href="#vitamins">Витамины</a>
                     </TOC>
                 </FloatBlock>
                 <Anchor id="intro" />
@@ -100,6 +104,7 @@ function OligoScanService({ data }) {
                         </ul>
                     </List>
                 </InfoPanel>
+                <Anchor id="minerals" />
                 <Heading type="line" titleH2="20 минералов" />
                 <Heading type="box" titleH3="Кальций (Сa)" small />
                 <p>Формирует скелет человека, влияет на процессы свертывания крови и обмен воды, нормализует обмен углеводов и хлорида натрия. Этот минерал также регулирует мышечное сокращение и секрецию гормонов, снижает уровень проницаемости стенок сосудов, обладает противовоспалительным действием. Недостаток или избыток кальция нарушает кислотно-щелочной баланс в организме.</p>
@@ -195,6 +200,7 @@ function OligoScanService({ data }) {
                 </List>
                 <Heading titleH4="Источники" type="underline" small />
                 <p>Яйца, молоко, хрен, лук, чеснок, красный перец, дрожжи, соя, бобовые, и цельные зерна.</p>
+                <Anchor id="metals" />
                 <Heading type="line" titleH2="14 токсичных металлов" />
                 <Heading type="box" titleH3="Алюминий (Al)" small />
                 <p>Токсичный металл, частично ответственный за определенные заболевания нервной системы и синдром раздраженной толстой кишки.</p>
@@ -359,6 +365,7 @@ function OligoScanService({ data }) {
                 </List>
                 <Heading titleH4="Ниже нормы" type="underline" small />
                 <p>Это очень важный показатель, который необходимо контролировать в случае ишемической болезни сердца. В случае стенокардии, чем больше отклонение показателя от нормы в меньшую сторону, тем выше риск инфаркта. Возвращение показателя к нормальному значению означает улучшение состояния пациента.</p>
+                <Anchor id="vitamins" />
                 <Heading type="line" titleH2="Витамины" small />
                 <Heading type="box" titleH3="Витамин А" small />
                 <p>Недостаток витамина А:</p>
@@ -495,7 +502,7 @@ export default OligoScanService
 export const pageQuery = graphql`
     query OligoScanServiceQuery {
         ...Helmet
-        OligoScanServiceHeader: imageSharp(fluid: { originalName: { regex: "/lpg-massage-service-header/" } }) {
+        OligoScanServiceHeader: imageSharp(fluid: { originalName: { regex: "/oligoscan-service-header/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }

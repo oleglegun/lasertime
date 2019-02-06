@@ -73,7 +73,7 @@ function Services({ data }) {
                         <ServiceGridItem
                             title="Диагностика OligoScan"
                             link="/services/oligoscan"
-                            imgSizes={data.SmasLiftingServiceHeader.fluid}
+                            imgSizes={data.OligoScanServiceHeader.fluid}
                         />
                     </ServiceGrid>
                 </div>
@@ -165,6 +165,13 @@ export const pageQuery = graphql`
         }
         SmasLiftingServiceHeader: imageSharp(
             fluid: { originalName: { regex: "/smas-lifting-service-header/" } }
+        ) {
+            fluid(maxWidth: 350) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        OligoScanServiceHeader: imageSharp(
+            fluid: { originalName: { regex: "/oligoscan-service-header/" } }
         ) {
             fluid(maxWidth: 350) {
                 ...GatsbyImageSharpFluid_noBase64
