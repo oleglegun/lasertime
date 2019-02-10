@@ -190,7 +190,7 @@ export const pageQuery = graphql`
             }
         }
         AngioScanServiceHeader: imageSharp(
-            fluid: { originalName: { regex: "/oligoscan-service-header/" } }
+            fluid: { originalName: { regex: "/angioscan-service-header/" } }
         ) {
             fluid(maxWidth: 350) {
                 ...GatsbyImageSharpFluid_noBase64

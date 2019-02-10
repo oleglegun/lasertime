@@ -128,7 +128,7 @@ export default AngioScanService
 export const pageQuery = graphql`
     query AngioScanServiceQuery {
         ...Helmet
-        AngioScanServiceHeader: imageSharp(fluid: { originalName: { regex: "/lpg-massage-service-header/" } }) {
+        AngioScanServiceHeader: imageSharp(fluid: { originalName: { regex: "/angioscan-service-header/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
