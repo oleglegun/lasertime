@@ -75,6 +75,11 @@ function Services({ data }) {
                             link="/services/oligoscan"
                             imgSizes={data.OligoScanServiceHeader.fluid}
                         />
+                        <ServiceGridItem
+                            title="Диагностика AngioScan"
+                            link="/services/angioscan"
+                            imgSizes={data.AngioScanServiceHeader.fluid}
+                        />
                     </ServiceGrid>
                 </div>
             </div>
@@ -178,6 +183,13 @@ export const pageQuery = graphql`
             }
         }
         OligoScanServiceHeader: imageSharp(
+            fluid: { originalName: { regex: "/oligoscan-service-header/" } }
+        ) {
+            fluid(maxWidth: 350) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        AngioScanServiceHeader: imageSharp(
             fluid: { originalName: { regex: "/oligoscan-service-header/" } }
         ) {
             fluid(maxWidth: 350) {
