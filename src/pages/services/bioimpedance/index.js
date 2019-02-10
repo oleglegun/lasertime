@@ -67,7 +67,7 @@ function BioimpedanceService({ data }) {
                 </List>
 
                 <Anchor id="stats" />
-                <ServiceStats durationText="15 - 20 мин." priceText="от 2 000 до 2 500 руб." priceLink="/" quantityText="10 (2 - 3 раза в неделю)" />
+                <ServiceStats durationText="60 мин." priceText="5 000 руб." priceLink="/prices/bioimpedance-oligoscan-angioscan/" quantityText="1" />
 
                 <Anchor id="theory" />
                 <CollapsiblePanel title="Принцип работы">
