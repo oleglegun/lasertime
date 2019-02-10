@@ -141,7 +141,7 @@ export default BioimpedanceService
 export const pageQuery = graphql`
     query BioimpedanceServiceQuery {
         ...Helmet
-        BioimpedanceServiceHeader: imageSharp(fluid: { originalName: { regex: "/lpg-massage-service-header/" } }) {
+        BioimpedanceServiceHeader: imageSharp(fluid: { originalName: { regex: "/bioimpedance-service-header/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }

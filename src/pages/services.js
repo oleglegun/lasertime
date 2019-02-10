@@ -68,7 +68,7 @@ function Services({ data }) {
                         <ServiceGridItem
                             title="Биоимпеданс"
                             link="/services/bioimpedance"
-                            imgSizes={data.SmasLiftingServiceHeader.fluid}
+                            imgSizes={data.BioimpedanceServiceHeader.fluid}
                         />
                         <ServiceGridItem
                             title="Диагностика OligoScan"
@@ -165,6 +165,13 @@ export const pageQuery = graphql`
         }
         SmasLiftingServiceHeader: imageSharp(
             fluid: { originalName: { regex: "/smas-lifting-service-header/" } }
+        ) {
+            fluid(maxWidth: 350) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        BioimpedanceServiceHeader: imageSharp(
+            fluid: { originalName: { regex: "/bioimpedance-service-header/" } }
         ) {
             fluid(maxWidth: 350) {
                 ...GatsbyImageSharpFluid_noBase64
