@@ -19,6 +19,33 @@ function ArticleList({ data }) {
 
                 <div className="PageContent__wrapper">
                     <ArticlePreview
+                        title={'Омоложение кожи препаратами последнего поколения'}
+                        path={'/articles/full-face-regeneration-derm/'}
+                        imageSizes={data.FullFaceRegenerationDermArticle.fluid}
+                        description={
+                            'Не верите в омоложение лица всего за одну процедуру?! Попробуйте методику FULL FACE Regeneration Derm. Это инновационная методика, сочетающая несколько активных омолаживающих процедур всего за один визит пациента в клинику красоты.'
+                        }
+                        type={'article'}
+                    />
+                    <ArticlePreview
+                        title={'Биоремоделирование PROFHILO (Профайло)'}
+                        path={'/articles/bioremodeling-profhilo/'}
+                        imageSizes={data.BioremodelingProfhiloArticle.fluid}
+                        description={
+                            'Всего за 2 процедуры с интервалом в 1 месяц можно получить не только кожу великолепного качества, но и существенно сократить объем введения филлеров для терапии возрастных изменений либо отменить их совсем!'
+                        }
+                        type={'article'}
+                    />
+                    <ArticlePreview
+                        title={'Криотерапия Cryo-6 Zimmer'}
+                        path={'/articles/cryotherapy-cryo-6-zimmer/'}
+                        imageSizes={data.Cryo6ZimmerArticle.fluid}
+                        description={
+                            'Понятие «криотерапия» появилось сравнительно недавно, однако сам принцип лечения известен еще с давних времен, когда было открыто положительное влияние дозированных низких температур на организм человека.'
+                        }
+                        type={'article'}
+                    />
+                    <ArticlePreview
                         title={'ДНК тесты'}
                         path={'/articles/dna-test/'}
                         imageSizes={data.DNATestArticle.fluid}
@@ -319,8 +346,29 @@ export const pageQuery = graphql`
             }
         }
         # Preview images
+        FullFaceRegenerationDermArticle: imageSharp(
+            fluid: { originalName: { regex: "/full-face-regeneration-derm-article/" } }
+        ) {
+            fluid(maxWidth: 180) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
         DNATestArticle: imageSharp(
             fluid: { originalName: { regex: "/dna-test-article/" } }
+        ) {
+            fluid(maxWidth: 180) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        Cryo6ZimmerArticle: imageSharp(
+            fluid: { originalName: { regex: "/cryo-6-zimmer-article/" } }
+        ) {
+            fluid(maxWidth: 180) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        BioremodelingProfhiloArticle: imageSharp(
+            fluid: { originalName: { regex: "/bioremodeling-profhilo-article/" } }
         ) {
             fluid(maxWidth: 180) {
                 ...GatsbyImageSharpFluid_noBase64
