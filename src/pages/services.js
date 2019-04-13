@@ -80,6 +80,21 @@ function Services({ data }) {
                             link="/services/angioscan"
                             imgSizes={data.AngioScanServiceHeader.fluid}
                         />
+                        <ServiceGridItem
+                            title="Revixan"
+                            link="/services/revixan"
+                            imgSizes={data.RevixanServiceHeader.fluid}
+                        />
+                        <ServiceGridItem
+                            title="Lumenis M22"
+                            link="/services/lumenis-m22"
+                            imgSizes={data.LumenisM22ServiceHeader.fluid}
+                        />
+                        <ServiceGridItem
+                            title="ИГГТ"
+                            link="/services/iggt"
+                            imgSizes={data.IGGTServiceHeader.fluid}
+                        />
                     </ServiceGrid>
                 </div>
             </div>
@@ -191,6 +206,27 @@ export const pageQuery = graphql`
         }
         AngioScanServiceHeader: imageSharp(
             fluid: { originalName: { regex: "/angioscan-service-header/" } }
+        ) {
+            fluid(maxWidth: 350) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        RevixanServiceHeader: imageSharp(
+            fluid: { originalName: { regex: "/revixan-service-header/" } }
+        ) {
+            fluid(maxWidth: 350) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        LumenisM22ServiceHeader: imageSharp(
+            fluid: { originalName: { regex: "/lumenis-m22-service-header/" } }
+        ) {
+            fluid(maxWidth: 350) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        IGGTServiceHeader: imageSharp(
+            fluid: { originalName: { regex: "/iggt-service-header/" } }
         ) {
             fluid(maxWidth: 350) {
                 ...GatsbyImageSharpFluid_noBase64
