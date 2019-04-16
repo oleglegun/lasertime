@@ -19,6 +19,15 @@ function ArticleList({ data }) {
 
                 <div className="PageContent__wrapper">
                     <ArticlePreview
+                        title={'Лифтинг «Forever Young»'}
+                        path={'/articles/forever-young-lifting/'}
+                        imageSizes={data.ForeverYoungLiftingArticle.fluid}
+                        description={
+                            'В Новый год с Новым лицом за один приём! Комплексное пакетное предложение «Лифтинг Forever Young за 1 посещение»: 3 в 1 по специальной цене!'
+                        }
+                        type={'article'}
+                    />
+                    <ArticlePreview
                         title={'Омоложение кожи препаратами последнего поколения'}
                         path={'/articles/full-face-regeneration-derm/'}
                         imageSizes={data.FullFaceRegenerationDermArticle.fluid}
@@ -346,6 +355,13 @@ export const pageQuery = graphql`
             }
         }
         # Preview images
+        ForeverYoungLiftingArticle: imageSharp(
+            fluid: { originalName: { regex: "/forever-young-lifting-article/" } }
+        ) {
+            fluid(maxWidth: 180) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
         FullFaceRegenerationDermArticle: imageSharp(
             fluid: { originalName: { regex: "/full-face-regeneration-derm-article/" } }
         ) {
