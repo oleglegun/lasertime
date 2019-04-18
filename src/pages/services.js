@@ -31,6 +31,11 @@ function Services({ data }) {
                             imgSizes={data.liftingInfiniServiceHeader.fluid}
                         />
                         <ServiceGridItem
+                            title="Anti-Age Протекторы"
+                            link="/services/anti-age-protectors"
+                            imgSizes={data.liftingInfiniServiceHeader.fluid}
+                        />
+                        <ServiceGridItem
                             title="Лазерное омоложение"
                             link="/services/laser-rejuvenation"
                             imgSizes={data.laserRejuvenationServiceHeader.fluid}
