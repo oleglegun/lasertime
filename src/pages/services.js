@@ -25,11 +25,11 @@ function Services({ data }) {
                             link="/services/laser-epilation"
                             imgSizes={data.laserEpilationServiceHeader.fluid}
                         />
-                        <ServiceGridItem
-                            title="3D лифтинг INFINI®"
-                            link="/services/3d-lifting-infini"
-                            imgSizes={data.liftingInfiniServiceHeader.fluid}
-                        />
+                        {/*<ServiceGridItem*/}
+                        {/*    title="3D лифтинг INFINI®"*/}
+                        {/*    link="/services/3d-lifting-infini"*/}
+                        {/*    imgSizes={data.liftingInfiniServiceHeader.fluid}*/}
+                        {/*/>*/}
                         <ServiceGridItem
                             title="Anti-Age Протекторы"
                             link="/services/anti-age-protectors"
