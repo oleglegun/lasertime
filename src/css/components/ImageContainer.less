@@ -1,0 +1,49 @@
+@import "../variables";
+
+.ImageContainer {
+    margin: 0 auto;
+
+    &--one-half {
+        width: auto;
+    }
+
+    &--one-third {
+        width: 75%;
+    }
+
+    &--one-fourth {
+        width: 50%;
+    }
+
+    &--size-auto {
+        width: auto;
+    }
+
+    @media @mobile-wide-widths {
+        &--one-half {
+            width: 66%
+        }
+
+        &--one-third {
+            width: 50%
+        }
+
+        &--one-fourth {
+            width: 33%
+        }
+    }
+
+    @media @tablet-widths {
+        &--one-half {
+            width: 50%
+        }
+
+        &--one-third {
+            width: 33%
+        }
+
+        &--one-fourth {
+            width: 25%
+        }
+    }
+}
