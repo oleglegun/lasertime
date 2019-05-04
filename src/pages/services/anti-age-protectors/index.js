@@ -14,6 +14,7 @@ import Layout from '../../../components/Layout'
 import InlineHighlight from '../../../components/InlineHighlight'
 import PullQuote from '../../../components/PullQuote'
 import Heading from '../../../components/Heading'
+import ImageContainer from '../../../components/ImageContainer'
 import Img from 'gatsby-image'
 import QuestionBlock from '../../../components/QuestionBlock'
 
@@ -107,15 +108,9 @@ function AntiAgeProtectorsService({ data }) {
 
                 <Anchor id="revitacare" />
                 <CollapsiblePanel title="REVITACARE (Франция)">
-                    <div>
-                        <FloatBlock>
-                            <Img sizes={data.revitacareLogo.fluid} title="" alt="" />
-                        </FloatBlock>
-                    </div>
-                    {/*<ImageContainer align="center" center width="oneThird" oneThird></ImageContainer>*/}
-                    {/*<div style={{ 'width': '60%', 'margin': 'auto' }}>*/}
-                    {/*    <Img sizes={data.revitacareLogo.fluid} title="" alt="" />*/}
-                    {/*</div>*/}
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.revitacareLogo.fluid} title="" alt="" />
+                    </ImageContainer>
 
                     <p>Лаборатория REVITACARE (Франция) основана не так давно в 2003 году, но уже в 2010 году REVITACARE
                         был признан одним из лучших брендов года. Компания включает в себя завод по производству
@@ -137,7 +132,11 @@ function AntiAgeProtectorsService({ data }) {
                     <p>Делятся на препараты для мезотерапии и биоревитализации.</p>
 
                     <Heading titleH3="Мезотерапия" type="line" />
-                    <Heading titleH4="СytoСare 502" medium type="box" />
+                    <Heading titleH4="СYTOСARE 502" medium type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.cytocare502.fluid} title="" alt="" />
+                    </ImageContainer>
 
                     <p><InlineHighlight>Заряд энергии для молодой кожи!</InlineHighlight></p>
 
@@ -161,8 +160,11 @@ function AntiAgeProtectorsService({ data }) {
                         интервалом в 14 дней, затем 1 раз в месяц.</p>
 
 
-                    <Heading titleH4="СytoСare 516" medium type="box" />
+                    <Heading titleH4="СYTOСARE 516" medium type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.cytocare516.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><InlineHighlight>Витаминный бриз для сухой и обезвоженной кожи</InlineHighlight></p>
 
                     <p><b>Состав:</b> гиалуроновая кислота, микроэлементы (молибден, ванадий, кальций, золото, калий,
@@ -184,8 +186,11 @@ function AntiAgeProtectorsService({ data }) {
                     <p><b>Применение:</b> Курс состоит из 6 процедур с интервалом в 7 дней, 2х поддерживающих процедур с
                         интервалом в 14 дней, затем 1 раз в месяц.</p>
 
-                    <Heading titleH4="СytoСare 532" medium type="box" />
+                    <Heading titleH4="СYTOСARE 532" medium type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.cytocare532.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><InlineHighlight>Источник жизненной силы для зрелой кожи</InlineHighlight></p>
                     <p><b>Состав:</b> гиалуроновая кислота, микроэлементы (молибден, ванадий, кальций, золото, калий,
                         медь,
@@ -212,6 +217,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="STRETCHCARE" medium type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.stretchcare.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><InlineHighlight>Французский лифтинг</InlineHighlight></p>
                     <p><b>Состав:</b> ДMAЭ, гиалуроновая кислота, витамин B5, глюконат меди, глюконат цинка, бензоат
                         натрия.</p>
@@ -226,6 +234,10 @@ function AntiAgeProtectorsService({ data }) {
                         процедур с интервалом в 14 дней. Затем 1 раз в месяц.</p>
 
                     <Heading titleH4="СELLUCARE" medium type="box" />
+                    
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.cellucare.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><InlineHighlight>Французский коктейль для коррекции целлюлита.</InlineHighlight></p>
                     <p><b>Состав:</b> кофеин бензоат натрия, гиалуроновая кислота, глюконат марганца, глюконат цинка,
                         глюконат кобальта.</p>
@@ -243,6 +255,10 @@ function AntiAgeProtectorsService({ data }) {
                         с интервалом в 14 дней, затем 1 раз в месяц.</p>
 
                     <Heading titleH4="HAIRCARE" medium type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.haircare.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><InlineHighlight>Забота о волосах и интенсивный уход.</InlineHighlight></p>
                     <p><b>Состав:</b> Гиалуроновая кислота, аминокислоты (аргинин, цистеин, глицин, орнитин, глутамин),
                         цинк, витамины группы В (В3, В5, В6, В8, В9, В12).</p>
@@ -262,7 +278,11 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH3="Биоревитализации" type="line" />
 
-                    <Heading titleH4="Revitacare Bio-Revitalisation" medium type="box" />
+                    <Heading titleH4="REVITACARE Bio-Revitalisation" medium type="box" />
+                    
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.revitacareBioRevitalisation.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><InlineHighlight>Удобное решение сложных проблем</InlineHighlight></p>
                     <p><b>Состав:</b> Флакон 1: 1%-я гиалуроновая кислота биотехнологического происхождения. Флакон 2:
                         мультивитаминный комплекс (ретинол, тиамин, рибофлавин, никотинамид, декспантенол, пиридоксин,
@@ -282,7 +302,11 @@ function AntiAgeProtectorsService({ data }) {
                         с интервалом в 14 дней, затем 1 раз в месяц</p>
 
 
-                    <Heading titleH4="Revitacare S Line" medium type="box" />
+                    <Heading titleH4="CYTOCARE S Line" medium type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.cytocareSLine.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><InlineHighlight>VIP биоревитализант для сияния и омоложения кожи.</InlineHighlight></p>
                     <p><b>Состав:</b> гиалуроновая кислота нестабилизированная 6мг/мл + Омолаживающий комплекс CT50
                         (аминокислоты, микроэлементы, витамины и другие биоактивные вещества).</p>
@@ -1568,7 +1592,7 @@ function AntiAgeProtectorsService({ data }) {
                         гиалуроната натрия инфракрасным когерентным излучением, что максимально приближает гиалуроновую
                         кислоту в составе препарата по своим характеристикам к природной, то есть вырабатываемой
                         организмом, и усиливает ее биологическую активность.</p>
-                    
+
                     <List marker="check" titleH3="Преимущества">
                         <ul>
                             <li>Высокий профиль эффективности</li>
@@ -1586,7 +1610,7 @@ function AntiAgeProtectorsService({ data }) {
                         успокаивающее, противоотечное и противовоспалительное действие.</p>
 
 
-                    <Heading titleH3="НА hialuronic acid 0,6%" type="box"/>
+                    <Heading titleH3="НА hialuronic acid 0,6%" type="box" />
                     <p>Продукт предназначен для классической биоревитализации кожи. Обеспечивает оздоровление сухой
                         кожи с признаками старения. Нормализует гидробаланс, “оживляет” уставшие ткани.</p>
                     <p><b>Форма выпуска:</b> 5 мл.</p>
@@ -1599,7 +1623,7 @@ function AntiAgeProtectorsService({ data }) {
                     <p><b>Результат:</b> Увлажнение. Повышение плотности и эластичности кожи. Разглаживание морщины.
                         Устранение "синеву". Эффект "открытого глаза".</p>
 
-                    <Heading titleH3="НА hialuronic acid 1,0%" type="box"/>
+                    <Heading titleH3="НА hialuronic acid 1,0%" type="box" />
                     <p>Продукт предназначен для классической биоревитализации кожи. Обеспечивает оздоровление сухой
                         кожи с признаками старения. Нормализует гидробаланс, “оживляет” уставшие ткани.</p>
                     <p><b>Форма выпуска:</b> 5 мл.</p>
@@ -1616,7 +1640,7 @@ function AntiAgeProtectorsService({ data }) {
                         Повышение тонуса и эластичности кожи. Разглаживание мелких морщин. Выравнивание микрорельефа и
                         цвета кожи. Восстановление кожи после повреждения УФ-лучами.</p>
 
-                    <Heading titleH3="НА hialuronic acid 1,2%" type="box"/>
+                    <Heading titleH3="НА hialuronic acid 1,2%" type="box" />
                     <p>Продукт предназначен для классической биоревитализации кожи. Обеспечивает оздоровление сухой
                         кожи с признаками старения. Нормализует гидробаланс, “оживляет” уставшие ткани.</p>
                     <p><b>Форма выпуска:</b> 5 мл.</p>
@@ -1634,7 +1658,7 @@ function AntiAgeProtectorsService({ data }) {
                         Разглаживание мелких морщин. Выравнивание микрорельефа и цвета кожи. Восстановление кожи после
                         повреждения УФ-лучами.</p>
 
-                    <Heading titleH3="НА hialuronic acid 1,5%" type="box"/>
+                    <Heading titleH3="НА hialuronic acid 1,5%" type="box" />
                     <p>Продукт предназначен для классической биоревитализации кожи. Обеспечивает оздоровление сухой
                         кожи с признаками старения. Нормализует гидробаланс, “оживляет” уставшие ткани.</p>
                     <p><b>Форма выпуска:</b> 5 мл.</p>
@@ -1651,7 +1675,7 @@ function AntiAgeProtectorsService({ data }) {
                         взаимодействия. Выравнивание микрорельефа и цвета кожи. Защита клеток от окислительного стресса.
                     </p>
 
-                    <Heading titleH3="CYTOLIFE Repare 0,6% +Zn" type="box"/>
+                    <Heading titleH3="CYTOLIFE Repare 0,6% +Zn" type="box" />
                     <p>Продукт предназначен для биоревитализации кожи головы. Состав помогает оздоровить кожу головы,
                         предотвратить облысение, улучшить качество волос.</p>
                     <p><b>Состав:</b> гиалуронан натрия и гиалуронан цинка в соотношении 5:1, фосфатный буфер до pH
@@ -1665,9 +1689,8 @@ function AntiAgeProtectorsService({ data }) {
                     <p><b>Результат:</b> Оздоровление кожного покрова головы. Предотвращение облысения. Улучшает
                         качества волос. Профилактика ранней седины. Устранение себореи. Коррекция акне и постакне.</p>
 
-                    
 
-                    <Heading titleH3="CYTOLIFE MESOLIFT ZN+ HA 0,6%" type="box"/>
+                    <Heading titleH3="CYTOLIFE MESOLIFT ZN+ HA 0,6%" type="box" />
                     <p><b>Состав:</b> гиалуронан натрия и гиалуронан цинка в соотношении 5:1, фосфатный буфер до pH
                         7,2, вода для инъекций.</p>
                     <p><b>Применение:</b> Рекомендован курс из 6-8 процедур с периодичностью 1 раз в 7-10 дней. Как
@@ -1678,7 +1701,7 @@ function AntiAgeProtectorsService({ data }) {
                     <p><b>Результат:</b> Подготовка пациентов к солнечной инсоляции. Восстановление кожи после
                         воздействия негативных факторов внешней среды. Стимуляция роста волос.</p>
 
-                    <Heading titleH3="CYTOLIFE Mesolift ZN+ HA 0,8%" type="box"/>
+                    <Heading titleH3="CYTOLIFE Mesolift ZN+ HA 0,8%" type="box" />
                     <p><b>Состав:</b> гиалуронан натрия и гиалуронан цинка в соотношении 5:1, фосфатный буфер до pH
                         7,2, вода для инъекций.</p>
                     <p><b>Применение:</b> Рекомендован курс из 6-8 процедур с периодичностью 1 раз в 7-10 дней. Как
@@ -1690,7 +1713,7 @@ function AntiAgeProtectorsService({ data }) {
                         лица.</p>
 
 
-                    <Heading titleH3="CYTOLIFE Body filler HA 1,3%" type="box"/>
+                    <Heading titleH3="CYTOLIFE Body filler HA 1,3%" type="box" />
                     <p>Продукт предназначен для подтяжки, укрепления овала, живота, рук, бедер. Сочетание гиалуроновой
                         кислоты и цинка в Бодифилере позволяет провести настоящую репарацию тканей. Данный вариант
                         выпускается объемом 10 мл.</p>
@@ -1707,7 +1730,7 @@ function AntiAgeProtectorsService({ data }) {
                         бедра, внутренней поверхности бедра.</p>
 
 
-                    <Heading titleH3="CYTOLIFE Vision HA 0,6%" type="box"/>
+                    <Heading titleH3="CYTOLIFE Vision HA 0,6%" type="box" />
                     <p>Продукт для омоложения кожи вокруг глаз. Деликатно действует в нежной области.</p>
                     <p><b>Состав:</b> гиалуронан натрия 0,3%, фосфатный буфер до pH 7,2, вода для инъекций</p>
                     <p><b>Показания:</b> Уставший взгляд. Отеки, дряблость, возрастные проявления, Темные круги под
@@ -1718,7 +1741,7 @@ function AntiAgeProtectorsService({ data }) {
                         отдохнувший взгляд. Устранение мелких морщинок, признаков усталости. Избавление от пигментации.
                         Интенсивный лифтинг. Восстановление гидратанцы.</p>
 
-                    <Heading titleH3="CYTOLIFE Remodulator HA 1,1% +Zn" type="box"/>
+                    <Heading titleH3="CYTOLIFE Remodulator HA 1,1% +Zn" type="box" />
                     <p>Продукт для возрастной кожи (40+). Обладает свойствами пролонгированной биорепарации и запускает
                         собственные регенеративные процессы, восстанавливает целостность коллагенового матрикса.</p>
                     <p><b>Состав:</b> гиалуронан натрия 55 мг и гиалуронан цинка в соотношении 5:1, фосфатный буфер до
@@ -1744,7 +1767,7 @@ function AntiAgeProtectorsService({ data }) {
                     <p>Линейка филлеров Neauvia Organic настолько широка, что удовлетворяет потребности практически
                         каждого пациента в любой точке земного шара.</p>
 
-                    <Heading titleH3="NEAUVIA Organic HYDRO DELUXE" type="box"/>
+                    <Heading titleH3="NEAUVIA Organic HYDRO DELUXE" type="box" />
                     <p><b>Состав:</b> высококонцентрированная гиалуроновая кислота 18 мг/мл, обогащенная 0,01%
                         гидроксиапатита кальция (СаНа).</p>
                     <p><b>Показания:</b> Увлажнение, ревитализация кожи лица, шеи, зоны декольте и тела. Стимуляция
@@ -1756,7 +1779,7 @@ function AntiAgeProtectorsService({ data }) {
                         Регенерация, коррекция поверхностных морщин Заметное улучшение качества кожи.</p>
 
 
-                    <Heading titleH3="NEAUVIA Organic HYDRO DELUXE MAN" type="box"/>
+                    <Heading titleH3="NEAUVIA Organic HYDRO DELUXE MAN" type="box" />
                     <p><b>Состав:</b> высококонцентрированная гиалуроновая кислота 18 мг/мл, обогащенная 0,01%
                         гидроксиапатита кальция (СаНа).</p>
                     <p><b>Показания:</b> Предназначен для мужчин. Профилактика и коррекция фото- и хроностарения.
@@ -1788,6 +1811,50 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid_noBase64
             }
         }
+        cytocare502: imageSharp(fluid: { originalName: { regex: "/cytocare-502/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        
+        cytocare516: imageSharp(fluid: { originalName: { regex: "/cytocare-516/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        cytocare532: imageSharp(fluid: { originalName: { regex: "/cytocare-532/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        
+        stretchcare: imageSharp(fluid: { originalName: { regex: "/stretchcare/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        cellucare: imageSharp(fluid: { originalName: { regex: "/cellucare/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        haircare: imageSharp(fluid: { originalName: { regex: "/haircare/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        revitacareBioRevitalisation: imageSharp(fluid: { originalName: { regex: "/revitacare-bio-revitalisation/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        cytocareSLine: imageSharp(fluid: { originalName: { regex: "/cytocare-s-line/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        
+    
         
     }
 `
