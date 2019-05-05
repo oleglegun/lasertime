@@ -108,10 +108,10 @@ function AntiAgeProtectorsService({ data }) {
 
                 <Anchor id="revitacare" />
                 <CollapsiblePanel title="REVITACARE (Франция)">
-                    <ImageContainer oneHalf>
+                    
+                    <ImageContainer oneThird>
                         <Img sizes={data.revitacareLogo.fluid} title="" alt="" />
                     </ImageContainer>
-
                     <p>Лаборатория REVITACARE (Франция) основана не так давно в 2003 году, но уже в 2010 году REVITACARE
                         был признан одним из лучших брендов года. Компания включает в себя завод по производству
                         продукции для эстетической медицины, научно-исследовательскую лабораторию. Готовые французские
@@ -329,6 +329,10 @@ function AntiAgeProtectorsService({ data }) {
 
                 <Anchor id="hyalrepair" />
                 <CollapsiblePanel title="HYALREPAIR (Россия)">
+                    
+                    <ImageContainer oneThird>
+                        <Img sizes={data.martinex.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>В 2018 году компания MARTINEX Group представила новое поколение биорепарантов HYALREPAIR.</p>
                     <p>В новом поколении HYALREPAIR использованы последние инновационные технологии и международные
                         стандарты:</p>
@@ -558,6 +562,10 @@ function AntiAgeProtectorsService({ data }) {
 
                 <Anchor id="hyalual" />
                 <CollapsiblePanel title="HYALUAL (Швейцария)">
+                    
+                    <ImageContainer oneThird>
+                        <Img sizes={data.hyalual.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Институт Hyalual (Гиалуаль) в Швейцарии – это высокотехнологический институт инъекционной
                         косметологии, который специализируется на anti-age терапии. Фактически, это глобальный
                         научно-исследовательский центр, ориентированный на решение проблемы омоложения, коррекции и
@@ -599,6 +607,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Hyalual 1.1%" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalual11.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Препарат для курсовой процедуры редермализации. Возраст пациентов 28 -35 лет.</p>
                     <p><b>Состав:</b> Высокомолекулярная гиалуроновая кислота 1.1 %, янтарная кислота (сукцинат натрия)
                         1.6 %.</p>
@@ -620,7 +631,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Hyalual 1.8%" type="box" />
 
-
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalual18.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Препарат для курсовой процедуры редермализации. Возраст пациентов - с 35 лет.</p>
                     <p><b>Состав:</b> Высокомолекулярная гиалуроновая кислота 1.8 %, янтарная кислота (сукцинат натрия)
                         1.6 %.</p>
@@ -636,6 +649,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Hyalual 2.2%" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalual22.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Препарат для курсовой процедуры редермализации. Для работы по лицу препарат рекомендован с 35
                         лет при сильно выраженных возрастных изменениях. Для коррекции глубоких морщин, армировании – с
                         45 лет. Работа по телу – подходит в любом возрасте.</p>
@@ -1881,6 +1897,11 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid_noBase64
             }
         }
+        martinex: imageSharp(fluid: { originalName: { regex: "/martinex/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
         hyalrepair02Syringe: imageSharp(fluid: { originalName: { regex: "/hyalrepair-02-syringe/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
@@ -1922,6 +1943,26 @@ export const pageQuery = graphql`
             }
         }
         hyalrepairComplex10: imageSharp(fluid: { originalName: { regex: "/hyalrepair-complex-10/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hyalual: imageSharp(fluid: { originalName: { regex: "/hyalual/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hyalual11: imageSharp(fluid: { originalName: { regex: "/hyalual-1.1/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hyalual18: imageSharp(fluid: { originalName: { regex: "/hyalual-1.8/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hyalual22: imageSharp(fluid: { originalName: { regex: "/hyalual-2.2/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
