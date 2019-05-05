@@ -346,6 +346,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Hyalrepair-02 Bioreparant | Шприц" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalrepair02Syringe.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><b>Состав:</b> гиалуроновая кислота 14мг/мл, модифицированная витамином С, пролином, лизином и
                         глицином.</p>
                     <p><b>Показания:</b> Возрастные изменения кожи лица и тела (морщины, складки и тд). Сухая,
@@ -363,6 +366,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Hyalrepair-04 Bioreparant | Шприц" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalrepair04Syringe.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><b>Состав:</b> гиалуроновая кислота 14мг/мл 1,3 млн Да, гиалуроновая кислота, модифицированная
                         витамином С; цистеин, глутатион.</p>
                     <p><b>Показания:</b> Любое повреждение кожи вследствие агрессивного воздействия факторов внешней
@@ -385,6 +391,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Hyalrepair-06 Bioreparant | Флакон" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalrepair06Bottle.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><b>Состав:</b> гиалуроновая кислота, модифицированная витамином С, рибофлавином.</p>
                     <p><b>Показания:</b> Возрастное снижение упругости и эластичности кожи в сочетании со склонностью к
                         появлению воспалительных элементов. Угревая болезнь. Изменение микро и макрорельефа (расширенные
@@ -401,6 +410,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Hyalrepair-07 Bioreparant | Флакон" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalrepair07Bottle.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><b>Состав:</b> гиалуроновая кислота, модифицированная витамином С, валином, лизином, цистеином.
                     </p>
                     <p><b>Показания:</b> Коррекция возрастных изменений кожи - восстановление утраченного объема дермы,
@@ -417,6 +429,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Hyalrepair-08 Bioreparant | Флакон" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalrepair08Bottle.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><b>Состав:</b> гиалуроновая кислота, модифицированная витамином С, L-карнитином.</p>
                     <p><b>Показания:</b> Биологическое старение кожи, в том числе с избыточными жировыми отложениями в
                         корректируемой зоне. Локальные жировые отложения небольшого объема в области лица и тела, в том
@@ -431,6 +446,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Hyalrepair-08 Bioreparant | Шприц" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalrepair08Syringe.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><b>Состав:</b> гиалуроновая кислота 14 мг/мл, модифицированная витамином С, L-карнитином.</p>
                     <p><b>Показания:</b> Возрастные изменения кожи лица и тела: морщины, складки и т.д. Возрастные
                         изменения
@@ -450,6 +468,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Hyalrepair-10 Bioreparant | Флакон" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalrepair10Bottle.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><b>Состав:</b> гиалуроновая кислота, модифицированная витамином С, глутатионом, цистеином.</p>
                     <p><b>Показания:</b> Коррекция возрастных изменений кожи: восстановление утраченного объема дермы,
                         заполнение депрессий и морщин. Дегидратация кожи. Укрепление сосудов. Гиперпигментация.
@@ -466,6 +487,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Hyalrepair-5 Витосомальный комплекс" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalrepairComplex05.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><b>Состав:</b> гиалуроновая кислота, модифицированная витамином С, фолиевой кислотой.</p>
                     <p><b>Показания:</b> Повышение иммунитета. Стимуляция образования клеток эритроцитов, иммунной и
                         нервной
@@ -495,8 +519,12 @@ function AntiAgeProtectorsService({ data }) {
                         процедуры с интервалом в 10-14 дней. Возможно проведение поддерживающих процедур 1 раз в
                         месяц.</p>
 
+                    
                     <Heading titleH4="Hyalrepair-10 Витосомальный комплекс" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hyalrepairComplex10.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><b>Состав:</b> Гиалуроновая кислота, модифицированная витамином С, L-глутатионом, L-цистеином.
                     </p>
                     <p><b>Показания:</b> Восстановление обмена веществ. Проведение общей детоксикации организма. Защита
@@ -1853,8 +1881,50 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid_noBase64
             }
         }
-        
-    
-        
+        hyalrepair02Syringe: imageSharp(fluid: { originalName: { regex: "/hyalrepair-02-syringe/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }    
+        hyalrepair04Syringe: imageSharp(fluid: { originalName: { regex: "/hyalrepair-04-syringe/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hyalrepair06Bottle: imageSharp(fluid: { originalName: { regex: "/hyalrepair-06-bottle/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hyalrepair07Bottle: imageSharp(fluid: { originalName: { regex: "/hyalrepair-07-bottle/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hyalrepair08Bottle: imageSharp(fluid: { originalName: { regex: "/hyalrepair-08-bottle/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hyalrepair08Syringe: imageSharp(fluid: { originalName: { regex: "/hyalrepair-08-syringe/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hyalrepair10Bottle: imageSharp(fluid: { originalName: { regex: "/hyalrepair-10-bottle/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hyalrepairComplex05: imageSharp(fluid: { originalName: { regex: "/hyalrepair-complex-05/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hyalrepairComplex10: imageSharp(fluid: { originalName: { regex: "/hyalrepair-complex-10/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
     }
 `
