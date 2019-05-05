@@ -733,6 +733,10 @@ function AntiAgeProtectorsService({ data }) {
 
                 <Anchor id="jalupro" />
                 <CollapsiblePanel title="JALUPRO (Италия)">
+                    
+                    <ImageContainer oneThird>
+                        <Img sizes={data.jaluproLogo.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Инъекционные препараты линии JALUPRO представляют собой биоревитализанты, произведенные в
                         соответствие с требованиями Eвропейского союза. Препараты безопасны, эффективны, биосовместимы с
                         тканями организма, гипоаллергенны. Клинические исследования показывают, что препараты JALUPRO
@@ -771,6 +775,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="JALUPRO (Ялупро)" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.jalupro.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Комплексный препарат для биоревитализации. Рекомендован для пациентов с первыми признаками
                         старения – 25–35 лет. Зоны терапии: лицо, шея, декольте, внутренняя поверхность плеча, тыл
                         кисти, живот, внутренняя поверхность бедра, колени.</p>
@@ -792,6 +799,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="JALUPRO (Ялупро) HMW" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.jaluproHmw.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Особенность Jalupro HMW — пролонгированное воздействие благодаря высокой концентрации
                         гиалуроновой кислоты. Препарат находится в коже в течение 2 недель и рекомендован для
                         использования на возрастной коже от 45 лет.</p>
@@ -1947,7 +1957,7 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid_noBase64
             }
         }
-        hyalual: imageSharp(fluid: { originalName: { regex: "/hyalual/" } }) {
+        hyalual: imageSharp(fluid: { originalName: { regex: "/hyalual-logo/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
@@ -1963,6 +1973,21 @@ export const pageQuery = graphql`
             }
         }
         hyalual22: imageSharp(fluid: { originalName: { regex: "/hyalual-2.2/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        jaluproLogo: imageSharp(fluid: { originalName: { regex: "/jalupro-logo/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        jalupro: imageSharp(fluid: { originalName: { regex: "/jalupro-simple/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        jaluproHmw: imageSharp(fluid: { originalName: { regex: "/jalupro-hmw/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
