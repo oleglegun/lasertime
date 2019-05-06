@@ -849,6 +849,10 @@ function AntiAgeProtectorsService({ data }) {
 
                 <Anchor id="filorga" />
                 <CollapsiblePanel title="FILORGA (Франция)">
+                    
+                    <ImageContainer oneThird>
+                        <Img sizes={data.filorgaLogo.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Основная цель выпуска препаратов Filorga/Филорга – вернуть молодость коже. Достичь эффекта
                         фотоомоложения, разгладить мелкие морщины, приподнять линии птоза – это результат, который дают
                         инъекции французских биоревитализантов.</p>
@@ -884,8 +888,11 @@ function AntiAgeProtectorsService({ data }) {
                     <p>Этот комплекс входит во все коктейли серии NCTF-135. Основное отличие между ними заключается в
                         количестве гиалуроновой кислоты в их составе.</p>
 
-                    <Heading titleH4="Filorga (Филорга) NCTF-135+ Инновационный" type="box" />
+                    <Heading titleH4="Filorga (Филорга) NCTF-135 Инновационный" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.filorgaNctf135.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Идеальная полиревитализация молодой кожи в возрастной группе до 30 лет. </p>
                     <p><b>Состав:</b> гиалуроновая кислота 0,025 мг/мл, 12 витаминов, 20 аминокислот и 3 родственных
                         соединения, 6 минералов, 6 коферментов, 5 нуклеиновых кислот, 2 антиоксиданта.</p>
@@ -900,6 +907,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Filorga (Филорга) NCTF-135НА Обогащенный" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.filorgaNctf135ha.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Рекомендуется для 30-35-летнего возраста, потому что первые признаки старения начинают
                         проявляться с 30 лет. Однако профессиональный косметолог может рекомендовать его и более молодым
                         женщинам с ранними признаками старения дермы.</p>
@@ -922,6 +932,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Filorga (Филорга) NCTF-135НА+ Экстраобогащенный" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.filorgaNctf135haPlus.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Предназначен для омоложения кожи для людей от тридцати пяти лет. Применяется для устранения
                         морщин и восстановления тонуса эпидермиса. Помогает предотвратить преждевременное увядание кожи
                         людям, подверженным хроническому стрессу и злоупотребляющим нахождением на солнце. Эффективно
@@ -953,6 +966,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Filorga (Филорга) М-НА10" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.filorgaMHa10.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Препарат для биоревитализации и увлажнения кожи, содержит в своем составе гиалуроновую кислоту
                         неживотного происхождения, которая стерилизуется методом двойной органической фильтрации. Данный
                         метод позволяет избежать нагревания гиалуроновой кислоты до высоких температур, что сохраняет ее
@@ -977,6 +993,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Filorga (Филорга) М-НА18" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.filorgaMHa18.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Инновационный дермальный филлер для интенсивного увлажнения кожи, заполнения поверхностных
                         морщин, биоармирования. Микрофиллер Filorga (Филорга) М-НА18 - препарат, сочетающий в себе
                         филлинговые свойства и свойства биоревитализанта одновременно. Специальная формула препарата
@@ -1988,6 +2007,36 @@ export const pageQuery = graphql`
             }
         }
         jaluproHmw: imageSharp(fluid: { originalName: { regex: "/jalupro-hmw/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        filorgaLogo: imageSharp(fluid: { originalName: { regex: "/filorga-logo/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        filorgaMHa10: imageSharp(fluid: { originalName: { regex: "/filorga-m-ha-10/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        filorgaMHa18: imageSharp(fluid: { originalName: { regex: "/filorga-m-ha-18/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        filorgaNctf135: imageSharp(fluid: { originalName: { regex: "/filorga-nctf-135.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        filorgaNctf135ha: imageSharp(fluid: { originalName: { regex: "/filorga-nctf-135ha.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        filorgaNctf135haPlus: imageSharp(fluid: { originalName: { regex: "/filorga-nctf-135ha-plus.jpg/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
