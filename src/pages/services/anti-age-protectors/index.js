@@ -1026,6 +1026,9 @@ function AntiAgeProtectorsService({ data }) {
 
                 <Anchor id="revi" />
                 <CollapsiblePanel title="Revi (Россия)">
+                    <ImageContainer oneThird>
+                        <Img sizes={data.reviLogo.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Биоревитализанты Revi — небольшая революция в области биохимии гиалуроновой кислоты, которая
                         позволила создать препараты инъекционного восстановления и омоложения кожи высшего класса.
                         Гиалуроновые гели, представленные в этой линейке, специально созданы для того, чтобы справиться
@@ -1052,6 +1055,10 @@ function AntiAgeProtectorsService({ data }) {
 
 
                     <Heading titleH4="Revi Meso 2.0%" type="box" />
+                    
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.reviMeso20.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Гиалуроновый гель REVI MESO 2%. Наличие высокой концентрации гиалуроновой кислоты делает данный
                         препарат эффективным для профилактики возрастных изменений, а также для уменьшения стрий.</p>
                     <p>Препарат обеспечивает ускоренную пролиферацию фибробластов и усиление их роста.</p>
@@ -1075,6 +1082,10 @@ function AntiAgeProtectorsService({ data }) {
                         Уменьшение пигментации.</p>
 
                     <Heading titleH4="Revi Mesopeptides 2.0%" type="box" />
+                    
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.reviMesopeptides20.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Этот коктейль для биоревитализации эффективно применяется для выравнивания рельефа кожи,
                         уменьшения клинических проявлений угревой сыпи, нормализации функции сальных желез. Также
                         применение препарата ведет к уменьшению пигментных пятен на коже и улучшению цвета лица и
@@ -1103,6 +1114,10 @@ function AntiAgeProtectorsService({ data }) {
                         Уменьшение пигментации. Репарация кожных покровов после травмирующих процедур.</p>
 
                     <Heading titleH4="Revi Meso Gold 1.5%" type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.reviMesoGold15.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Данный препарат содержит наночастицы золота, обладает выраженными антиоксидантными свойствами и
                         защищает клетки от действия свободных радикалов. Гиалуроновый гель нормализует кровообращение и
                         улучшает тонус кровеносных сосудов, работая на межклеточном и внутриклеточном уровне.</p>
@@ -1134,6 +1149,10 @@ function AntiAgeProtectorsService({ data }) {
 
 
                     <Heading titleH4="Revi Meso Gold 2.0%" type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.reviMesoGold20.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Препарат с ярковыраженным антиоксидантным свойством, содержащий наночастицы золота. Защищает
                         клетки от действия свободных радикалов.</p>
                     <p>Действие препарата REVI MESO GOLD 2%, направлено на восстановление тургора, эластичности,
@@ -1166,6 +1185,10 @@ function AntiAgeProtectorsService({ data }) {
 
 
                     <Heading titleH4="Revi Meso Platinum 1.5%" type="box" />
+                    
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.reviMesoPlatinum15.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Данный препарат содержит наночастицы платины с ярко выраженным противовоспалительным и
                         антиоксидантным свойством. Обеспечение защиты внутриклеточного матрикса и стимуляция процесса
                         регенерации гарантирует коже молодость, сияние и здоровье.</p>
@@ -1189,6 +1212,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="Revi Meso Platinum 2.0%" type="box" />
 
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.reviMesoPlatinum20.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Препарат для мезотерапии лица, содержащий наночастицы платицы, обладает эффектом лифтинга,
                         anti-age эффектом, а также имеет антиоксидантное, противовоспалительное, отбеливающее и
                         очищающее свойство.</p>
@@ -1225,6 +1251,10 @@ function AntiAgeProtectorsService({ data }) {
 
 
                     <Heading titleH4="Revi Brilliants" type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.reviBrilliants.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Препарат Revi Brilliants имеет улучшенный биохимический состав, что делает его революционным в
                         сфере косметологии. Не уступает по качествам продукции зарубежного производства, при этом цена
                         Brilliants остается на достаточно низком уровне. Состав Revi Brilliant основан на геле из
@@ -2037,6 +2067,46 @@ export const pageQuery = graphql`
             }
         }
         filorgaNctf135haPlus: imageSharp(fluid: { originalName: { regex: "/filorga-nctf-135ha-plus.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        reviLogo: imageSharp(fluid: { originalName: { regex: "/revi-logo/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        reviMeso20: imageSharp(fluid: { originalName: { regex: "/revi-meso-20/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        reviMesopeptides20: imageSharp(fluid: { originalName: { regex: "/revi-mesopeptides-20/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        reviMesoGold15: imageSharp(fluid: { originalName: { regex: "/revi-meso-gold-15/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        reviMesoGold20: imageSharp(fluid: { originalName: { regex: "/revi-meso-gold-20/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        reviMesoPlatinum15: imageSharp(fluid: { originalName: { regex: "/revi-meso-platinum-15/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        reviMesoPlatinum20: imageSharp(fluid: { originalName: { regex: "/revi-meso-platinum-20/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        reviBrilliants: imageSharp(fluid: { originalName: { regex: "/revi-brilliants/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
