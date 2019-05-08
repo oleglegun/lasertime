@@ -1465,8 +1465,10 @@ function AntiAgeProtectorsService({ data }) {
 
                 <Anchor id="aquashine" />
                 <CollapsiblePanel title="AQUASHINE (Южная Корея)">
-
-
+                    
+                    <ImageContainer oneThird>
+                        <Img sizes={data.aquashineLogo.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Препарат Revofil Aquashine разработан южнокорейским фармацевтическим холдингом Caregen co. LTD и
                         на сегодняшний день является одним из наиболее эффективных в борьбе со старением кожи.</p>
                     <p>Препарат замечательно работает не только для лица, но и для других проблемных зон. Отличный
@@ -1482,7 +1484,6 @@ function AntiAgeProtectorsService({ data }) {
                         на выработку коллагена; коэнзимы, активно влияющие на омоложение; аминокислоты (24); минералы и
                         микроэлементы, стимулирующие обменные процессы в клетках кожи.</p>
 
-
                     <p><InlineHighlight>Пептиды</InlineHighlight> - вещества, оказывающие мощное антиоксидантное
                         воздействие на кожу. Другими словами, пептиды не
                         дают коже стареть под влиянием разнообразных факторов, которым можно отнести и ультрафиолетовое
@@ -1497,11 +1498,9 @@ function AntiAgeProtectorsService({ data }) {
                             <li>Oлигопептид-72 — предупреждает образование новых морщин и углубление имеющихся кожных
                                 складок
                             </li>
-
                         </ul>
                     </List>
-
-
+                    
                     <p><InlineHighlight>Аминокислоты</InlineHighlight> - вещества, отвечающие за процессы регенерации в
                         кожи, в том числе, и после самих уколов, а также
                         за омоложение глубоких слоев дермы.</p>
@@ -1535,24 +1534,32 @@ function AntiAgeProtectorsService({ data }) {
 
                     <p>Несмотря на то, что Аквашайн/Aquashine имеет уникальный состав, который подходит каждому,
                         фирма-производитель создала три версии состава для инъекций:</p>
-                    <List marker="dot">
-                        <ul>
-                            <li><b>Aquashine Soft</b> - универсальный препарат, который может быть использован для
-                                любого пациента, желающего омолодить кожу или придать ей более свежий и ухоженный вид.
-                            </li>
-                            <li><b>Aquashine BR</b> - данный тип препарата подойдет для тех пациентов, которые страдают
-                                выраженной пигментацией - возрастной или от воздействия солнечных лучей. В состав
-                                коктейля добавлен уникальный пептид, убирающий неприятные явления пигментации. При этом
-                                он действует таким образом, что не позволяет пигментным пятнам появляться заново, снижая
-                                выработку меланина в организме. Интенсивная пигментация появляется в основном после 50
-                                лет.
-                            </li>
-                            <li><b>Aquashine BTX</b> - данный состав несколько необычен для традиционной
-                                биоревитализации. Препарат воздействует на мускулатуру лица, тем самым, параллельно с
-                                традиционным действием от биоревитализации, борясь с мимическими морщинами.
-                            </li>
-                        </ul>
-                    </List>
+                    
+                    <Heading titleH3="Aquashine Soft Filler" type="box"/>
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.aquashineSoftFiller.fluid} title="" alt="" />
+                    </ImageContainer>
+                    <p>Универсальный препарат, который может быть использован для любого пациента, желающего омолодить кожу или придать ей более свежий и ухоженный вид.</p>
+                    
+                    <Heading titleH3="Aquashine Soft Filler BR" type="box"/>
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.aquashineSoftFillerBr.fluid} title="" alt="" />
+                    </ImageContainer>
+                    <p>Данный тип препарата подойдет для тех пациентов, которые страдают
+                    выраженной пигментацией - возрастной или от воздействия солнечных лучей. В состав
+                    коктейля добавлен уникальный пептид, убирающий неприятные явления пигментации. При этом
+                    он действует таким образом, что не позволяет пигментным пятнам появляться заново, снижая
+                    выработку меланина в организме. Интенсивная пигментация появляется в основном после 50
+                    лет.</p>
+                    
+                    <Heading titleH3="Aquashine Soft Filler BTX" type="box"/>
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.aquashineSoftFillerBtx.fluid} title="" alt="" />
+                    </ImageContainer>
+                    <p>Данный состав несколько необычен для традиционной
+                    биоревитализации. Препарат воздействует на мускулатуру лица, тем самым, параллельно с
+                    традиционным действием от биоревитализации, борясь с мимическими морщинами.</p>
+                    
 
                     <p><b>Применение:</b> Как правило курс состоит из 4 процедур 1 раз в 2-4 недели. Повторный курс
                         через 6
@@ -2186,6 +2193,26 @@ export const pageQuery = graphql`
             }
         }
         hairXDnaPeptide: imageSharp(fluid: { originalName: { regex: "/hair-x-dna-peptide/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        aquashineLogo: imageSharp(fluid: { originalName: { regex: "/aquashine-logo/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        aquashineSoftFiller: imageSharp(fluid: { originalName: { regex: "/aquashine-soft-filler.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        aquashineSoftFillerBr: imageSharp(fluid: { originalName: { regex: "/aquashine-soft-filler-br/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        aquashineSoftFillerBtx: imageSharp(fluid: { originalName: { regex: "/aquashine-soft-filler-btx/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
