@@ -1286,6 +1286,9 @@ function AntiAgeProtectorsService({ data }) {
 
                 <Anchor id="mesopharm" />
                 <CollapsiblePanel title="Mesopharm (Россия)">
+                    <ImageContainer oneThird>
+                        <Img sizes={data.mesopharmLogo.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Компания “Мезофарм” была основана в Санкт-Петербурге в 2001 году. На данный момент производят
                         несколько линеек высокотехнологичных препаратов для мезотерапии и биоревитализации. Линия
                         Mesopeptide - это препараты целевого воздействия на эстетические проблемы, представленные в виде
@@ -1293,7 +1296,10 @@ function AntiAgeProtectorsService({ data }) {
                         для каждого пациента.</p>
 
 
-                    <Heading titleH4="ADN Restart Peptide formula" type="box" />
+                    <Heading titleH4="ADN Restart Peptide Formula" type="box" />
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.adnRestartPeptide.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Мощнейший препарат для борьбы с воспалениями и несовершенствами кожи. Нормализует процесс
                         отшелушивания кожи, повышает иммунный статус кожи, блокирует воспаление, уменьшает риск
                         образования рубцов.</p>
@@ -1309,7 +1315,11 @@ function AntiAgeProtectorsService({ data }) {
                     <p><b>Результат:</b> Уменьшение воспалений. Лифтинг-эффект. Повышение упругости кожи. Улучшение
                         цвета лица. Стимулирование обменных процессов в коже.</p>
 
-                    <Heading titleH4="ADN Restart Immuno formula" type="box" />
+                    <Heading titleH4="ADN Restart Immuno Formula" type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.adnRestartImmuno.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Быстро купирует воспалительные реакции.</p>
                     <p><b>Форма выпуска:</b> стерильный наполненный шприц 1.3 мл</p>
                     <p><b>Состав:</b> высококонцентрированная очищенная гиалуроновая кислота 10 мг/мл неживотного
@@ -1325,7 +1335,11 @@ function AntiAgeProtectorsService({ data }) {
                     <p><b>Результат:</b> Уменьшение риска образования рубцов. Регуляция воспалительных процессов.
                         Нормализация процессов апоптоза. Восстановление местных реакций иммунного ответа.</p>
 
-                    <Heading titleH4="Hydro Line Peptide formula" type="box" />
+                    <Heading titleH4="Hydro Line Peptide Formula" type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hydroLinePeptide.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Мгновенное преображение и здоровое сияние кожи. Идеален для возраста 30+</p>
                     <p><b>Форма выпуска:</b> стерильный наполненный шприц 2.0 мл.</p>
                     <p><b>Состав:</b> высококонцентрированная очищенная гиалуроновая кислота 50 мг/мл неживотного
@@ -1342,7 +1356,11 @@ function AntiAgeProtectorsService({ data }) {
                         кожи. Выравнивание микрорельефа кожи. Коррекция проблем периорбитальной зоны. Интенсивное
                         увлажнение. Комплексная терапия гиперпигментаций.</p>
 
-                    <Heading titleH4="Hydro Line P-Anti-Wrinkles formula" type="box" />
+                    <Heading titleH4="Hydro Line P-Anti-Wrinkles Formula" type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hydroLinePAntiWrinkles.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Идеален для тонкой и деликатной периорбитальной зоны. Идеально подходит для возраста 30+.</p>
                     <p><b>Форма выпуска:</b> стерильный наполненный шприц 1.3 мл.</p>
                     <p><b>Показания:</b> Борьба с мимическими морщинами и уменьшение мимической нагрузки. Дегидратация
@@ -1358,7 +1376,11 @@ function AntiAgeProtectorsService({ data }) {
                         гидрорезерва кожи.</p>
 
 
-                    <Heading titleH4="NucleoSpire DNA RNA 1% DM Peptide formula" type="box" />
+                    <Heading titleH4="NucleoSpire DNA RNA 1% DM Peptide Formula" type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.nucleospireDnaRna1Peptide.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Решает целый комплекс проблем, характерных для возрастных клиентов 45+.</p>
                     <p><b>Форма выпуска:</b> стерильный наполненный шприц 2.0 мл.</p>
                     <p><b>Состав:</b> высококонцентрированная очищенная гиалуроновая кислота 50 мг/мл неживотного
@@ -1373,7 +1395,11 @@ function AntiAgeProtectorsService({ data }) {
                         мелких морщин. Стимулирование выработки коллагена. Улучшение тургора и цвета кожи.</p>
 
 
-                    <Heading titleH4='NucleoSpire DNA-RNA 1% DM Anti-aging formula' type="box" />
+                    <Heading titleH4='NucleoSpire DNA-RNA 1% DM Anti-Aging Formula' type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.nucleospireDnaRna1AntiAging.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Препарат для борьбы с возрастными изменениями кожи с мгновенным эффектом разглаживания морщин.
                         Прекрасно подходи для возраста 40+.</p>
                     <p>NucleoSpire DNA-RNA 1% - DM Anti-Aging обладает мощным омолаживающим действием за счет богатого
@@ -1392,7 +1418,11 @@ function AntiAgeProtectorsService({ data }) {
                         цвета лица.</p>
 
 
-                    <Heading titleH4='Hair X "Peptide" formula' type="box" />
+                    <Heading titleH4='Hair X "Peptide" Formula' type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hairXPeptide.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Комплекс разработан для лечения алопеций различного генеза, стимуляции роста и профилактики
                         выпадения волос. Может использоваться у мужчин и женщин.</p>
                     <p><b>Форма выпуска:</b> стерильный наполненный шприц 1,3 мл</p>
@@ -1410,7 +1440,11 @@ function AntiAgeProtectorsService({ data }) {
                         выпадения волос. Улучшение качества волос.</p>
 
 
-                    <Heading titleH4='Hair X "DNA Peptide" formula' type="box" />
+                    <Heading titleH4='Hair X "DNA Peptide" Formula' type="box" />
+
+                    <ImageContainer oneHalf>
+                        <Img sizes={data.hairXDnaPeptide.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Комплекс разработан для лечения алопеций различного генеза, стимуляции роста и профилактики
                         выпадения волос. Может использоваться у мужчин и женщин.</p>
                     <p><b>Форма выпуска:</b> стерильный наполненный шприц 2.0 мл.</p>
@@ -2107,6 +2141,51 @@ export const pageQuery = graphql`
             }
         }
         reviBrilliants: imageSharp(fluid: { originalName: { regex: "/revi-brilliants/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        mesopharmLogo: imageSharp(fluid: { originalName: { regex: "/mesopharm-logo/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        adnRestartPeptide: imageSharp(fluid: { originalName: { regex: "/adn-restart-peptide/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        adnRestartImmuno: imageSharp(fluid: { originalName: { regex: "/adn-restart-immuno/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hydroLinePeptide: imageSharp(fluid: { originalName: { regex: "/hydro-line-peptide/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hydroLinePAntiWrinkles: imageSharp(fluid: { originalName: { regex: "/hydro-line-p-anti-wrinkles/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        nucleospireDnaRna1Peptide: imageSharp(fluid: { originalName: { regex: "/nucleospire-dna-rna-1-peptide/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        nucleospireDnaRna1AntiAging: imageSharp(fluid: { originalName: { regex: "/nucleospire-dna-rna-1-anti-aging/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hairXPeptide: imageSharp(fluid: { originalName: { regex: "/hair-x-peptide/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        hairXDnaPeptide: imageSharp(fluid: { originalName: { regex: "/hair-x-dna-peptide/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
