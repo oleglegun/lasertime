@@ -1597,6 +1597,10 @@ function AntiAgeProtectorsService({ data }) {
 
                 <Anchor id="premierpharm" />
                 <CollapsiblePanel title="Premierpharm (США)">
+                    
+                    <ImageContainer oneThird>
+                        <Img sizes={data.premierpharmLogo.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Компания ABG LAB LLC (США) и дочерняя компания Premierpharm, одни из ведущих в области разработки
                         анти-эйдж технологий, являются разработчиками инъекционных препаратов на основе синтетических
                         биопептидов. Продукция отличается эффективностью, инновационностью, безопасностью и прекрасно
@@ -1605,6 +1609,9 @@ function AntiAgeProtectorsService({ data }) {
 
                     <Heading titleH4="ABG Lab Meso-Wharton P199" type="box" />
 
+                    <ImageContainer oneFourth>
+                        <Img sizes={data.mesoWhartonP199.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Совершенный реструктуризант и биорепарант кожи. Инъекционный препарат, предназначенный для
                         интенсивной репарации и “омоложения” кожи лица после 40 лет.</p>
                     <p><b>Состав:</b> высокомолекулярная очищенная гиалуроновая кислота 15 мг/мл неживотного
@@ -1647,6 +1654,10 @@ function AntiAgeProtectorsService({ data }) {
 
 
                     <Heading titleH4="ABG Lab Meso-Xanthin F199" type="box" />
+                    
+                    <ImageContainer oneFourth>
+                        <Img sizes={data.mesoXanthinF199.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Инъекционный препарат нового поколения эпигенетической направленности для интенсивной
                         профилактики фото- и хроностарения кожи после 25 лет.</p>
                     <p><b>Состав:</b> высокомолекулярная очищенная гиалуроновая кислота 15,6 мг/мл неживотного
@@ -1671,6 +1682,10 @@ function AntiAgeProtectorsService({ data }) {
 
 
                     <Heading titleH4="ABG Lab Meso-Sculpt C71" type="box" />
+                    
+                    <ImageContainer oneFourth>
+                        <Img sizes={data.mesoSculptC71.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Репрограммирование жировых клеток. Новаторский многокомпонентный инъекционный препарат для
                         ремоделирования и коррекции локальных жировых отложений средней и нижней трети лица без
                         хирургического вмешательства. Процедура ориентирована главным образом на возрастных пациентов
@@ -1701,6 +1716,10 @@ function AntiAgeProtectorsService({ data }) {
 
 
                     <Heading titleH4="ABG Lab Meso-Eye С71" type="box" />
+                    
+                    <ImageContainer oneFourth>
+                        <Img sizes={data.mesoEyeC71.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Коррекция периорбитальной области. Эксклюзивное решение эстетических проблем в периорбитальной
                         области. Инъекции этого препарата сочетают эффект биоревитализации, контурной пластики и
                         мезотерапии.</p>
@@ -2213,6 +2232,31 @@ export const pageQuery = graphql`
             }
         }
         aquashineSoftFillerBtx: imageSharp(fluid: { originalName: { regex: "/aquashine-soft-filler-btx/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        premierpharmLogo: imageSharp(fluid: { originalName: { regex: "/premierpharm-logo/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        mesoWhartonP199: imageSharp(fluid: { originalName: { regex: "/meso-wharton-p199/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        mesoXanthinF199: imageSharp(fluid: { originalName: { regex: "/meso-xanthin-f199/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        mesoEyeC71: imageSharp(fluid: { originalName: { regex: "/meso-eye-c71/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        mesoSculptC71: imageSharp(fluid: { originalName: { regex: "/meso-sculpt-c71/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
