@@ -22,7 +22,6 @@ function AntiAgeProtectorsService({ data }) {
     return (
         <Layout>
             <Helmet data={data} title="Anti-Age Протекторы" description="" />
-
             <ArticleHeaderImage title="Anti-Age Протекторы" imgSizes={data.antiAgeProtectorsServiceHeader.fluid} />
 
             <div className="PageContent__wrapper">
@@ -1773,7 +1772,6 @@ function AntiAgeProtectorsService({ data }) {
                         обеспечивают улучшение метаболизма и стимуляцию процессов эпителизации, антиоксидантное,
                         успокаивающее, противоотечное и противовоспалительное действие.</p>
 
-
                     
                     <Heading titleH3="НА Hyaluronic Acid 0,6%" type="box" />
                     
@@ -1792,6 +1790,7 @@ function AntiAgeProtectorsService({ data }) {
                     <p><b>Результат:</b> Увлажнение. Повышение плотности и эластичности кожи. Разглаживание морщины.
                         Устранение "синеву". Эффект "открытого глаза".</p>
 
+                    
                     <Heading titleH3="НА Hyaluronic Acid 1,0%" type="box" />
                     
                     <ImageContainer oneThird>
@@ -1813,6 +1812,7 @@ function AntiAgeProtectorsService({ data }) {
                         Повышение тонуса и эластичности кожи. Разглаживание мелких морщин. Выравнивание микрорельефа и
                         цвета кожи. Восстановление кожи после повреждения УФ-лучами.</p>
 
+                    
                     <Heading titleH3="НА Hyaluronic Acid 1,2%" type="box" />
                     
                     <ImageContainer oneThird>
@@ -1835,6 +1835,7 @@ function AntiAgeProtectorsService({ data }) {
                         Разглаживание мелких морщин. Выравнивание микрорельефа и цвета кожи. Восстановление кожи после
                         повреждения УФ-лучами.</p>
 
+                    
                     <Heading titleH3="НА Hyaluronic Acid 1,5%" type="box" />
                     
                     <ImageContainer oneThird>
@@ -1856,6 +1857,7 @@ function AntiAgeProtectorsService({ data }) {
                         взаимодействия. Выравнивание микрорельефа и цвета кожи. Защита клеток от окислительного стресса.
                     </p>
 
+                    
                     <Heading titleH3="CYTOLIFE Repare 0,6% + Zn" type="box" />
                     
                     <ImageContainer oneThird>
@@ -1890,6 +1892,7 @@ function AntiAgeProtectorsService({ data }) {
                     <p><b>Результат:</b> Подготовка пациентов к солнечной инсоляции. Восстановление кожи после
                         воздействия негативных факторов внешней среды. Стимуляция роста волос.</p>
 
+                    
                     <Heading titleH3="CYTOLIFE Mesolift ZN+ HA 0,8%" type="box" />
                     
                     <ImageContainer oneThird>
@@ -1964,6 +1967,9 @@ function AntiAgeProtectorsService({ data }) {
 
                 <Anchor id="neauvia" />
                 <CollapsiblePanel title="NEAUVIA (Швейцария)">
+                    <ImageContainer oneThird>
+                        <Img sizes={data.neauviaLogo.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p>Это первая в мире органическая линия филлеров.</p>
                     <p>Данный продукт разработан с использованием новейших технологий, что обеспечивает высочайшую
                         очистку и эффективность.</p>
@@ -1973,6 +1979,10 @@ function AntiAgeProtectorsService({ data }) {
                         каждого пациента в любой точке земного шара.</p>
 
                     <Heading titleH3="NEAUVIA Organic HYDRO DELUXE" type="box" />
+                    
+                    <ImageContainer oneFourth>
+                        <Img sizes={data.neauviaHydroDeluxe.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><b>Состав:</b> высококонцентрированная гиалуроновая кислота 18 мг/мл, обогащенная 0,01%
                         гидроксиапатита кальция (СаНа).</p>
                     <p><b>Показания:</b> Увлажнение, ревитализация кожи лица, шеи, зоны декольте и тела. Стимуляция
@@ -1985,6 +1995,10 @@ function AntiAgeProtectorsService({ data }) {
 
 
                     <Heading titleH3="NEAUVIA Organic HYDRO DELUXE MAN" type="box" />
+                    
+                    <ImageContainer oneFourth>
+                        <Img sizes={data.neauviaHydroDeluxeMan.fluid} title="" alt="" />
+                    </ImageContainer>
                     <p><b>Состав:</b> высококонцентрированная гиалуроновая кислота 18 мг/мл, обогащенная 0,01%
                         гидроксиапатита кальция (СаНа).</p>
                     <p><b>Показания:</b> Предназначен для мужчин. Профилактика и коррекция фото- и хроностарения.
@@ -2354,6 +2368,21 @@ export const pageQuery = graphql`
             }
         }
         cytolifeRemodulatorHa11PlusZn: imageSharp(fluid: { originalName: { regex: "/cytolife-remodulator-ha-11-plus-zn/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        neauviaLogo: imageSharp(fluid: { originalName: { regex: "/neauvia-logo/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        neauviaHydroDeluxe: imageSharp(fluid: { originalName: { regex: "/neauvia-hydro-deluxe.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        neauviaHydroDeluxeMan: imageSharp(fluid: { originalName: { regex: "/neauvia-hydro-deluxe-man/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
