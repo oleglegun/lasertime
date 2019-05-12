@@ -25,7 +25,7 @@ class PageFooter extends React.Component {
                         запрещено.
                     </div>
                     <div className="PageFooter__copyright">
-                        © 2018 Клиника “Знак Качества”.{' '}
+                        © 2019 Клиника “Знак Качества”.{' '}
                         <span className="PageFooter__copyright-text">
                             {' '}
                             Все авторские права защищены.
