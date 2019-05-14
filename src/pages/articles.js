@@ -19,6 +19,15 @@ function ArticleList({ data }) {
 
                 <div className="PageContent__wrapper">
                     <ArticlePreview
+                        title={'Врач-косметолог – архитектор вашего лица!'}
+                        path={'/articles/doctor-architect/'}
+                        imageSizes={data.DoctorArchitectArticle.fluid}
+                        description={
+                            'Истинный специалист умеет ценить естественность и не бороться с ней, а использовать, видеть красоту данную. И ни в коем случае он не подгоняет все лица под шаблон. Иными словами, врач-косметолог – архитектор Вашего лица!'
+                        }
+                        type={'article'}
+                    />
+                    <ArticlePreview
                         title={'Лифтинг «Forever Young»'}
                         path={'/articles/forever-young-lifting/'}
                         imageSizes={data.ForeverYoungLiftingArticle.fluid}
@@ -357,6 +366,13 @@ export const pageQuery = graphql`
         # Preview images
         ForeverYoungLiftingArticle: imageSharp(
             fluid: { originalName: { regex: "/forever-young-lifting-article/" } }
+        ) {
+            fluid(maxWidth: 180) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        DoctorArchitectArticle: imageSharp(
+            fluid: { originalName: { regex: "/doctor-architect-article/" } }
         ) {
             fluid(maxWidth: 180) {
                 ...GatsbyImageSharpFluid_noBase64
