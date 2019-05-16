@@ -1,8 +1,23 @@
 {
     "name": "lasertime",
     "description": "LaserTime Clinic Site",
-    "version": "1.0",
+    "version": "1.0.0",
     "author": "Oleg Legun <oleg.legun@gmail.com>",
+    "license": "MIT",
+    "main": "n/a",
+    "keywords": [
+        "gatsby"
+    ],
+    "scripts": {
+        "build": "gatsby build",
+        "clean": "rm -r public/ .cache/",
+        "deploy": "yarn run build && yarn run upload",
+        "upload": "./scripts/upload-vscale.sh",
+        "develop": "gatsby develop",
+        "format": "prettier --config .prettierrc --write 'src/**/*.js'",
+        "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
     "dependencies": {
         "gatsby": "^2.17.10",
         "gatsby-image": "^2.2.30",
@@ -31,21 +46,6 @@
         "react-photoswipe": "^1.3.0",
         "react-scrollable-anchor": "^0.6.1",
         "react-yandex-maps": "^3.0.2"
-    },
-    "keywords": [
-        "gatsby"
-    ],
-    "license": "MIT",
-    "main": "n/a",
-    "scripts": {
-        "build": "gatsby build",
-        "clean": "rm -r public/ .cache/",
-        "deploy": "yarn run build && yarn run upload",
-        "upload": "./scripts/upload-vscale.sh",
-        "develop": "gatsby develop",
-        "format": "prettier --config .prettierrc --write 'src/**/*.js'",
-        "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "devDependencies": {
         "babel-eslint": "^8.0.1",
