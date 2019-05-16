@@ -1,19 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-const isProduction = process.env.NODE_ENV === 'production'
-//TODO add opengraph
-// https://github.com/oliverbenns/oliverbenns.com/blob/master/src/html.jsx
-
-let styles
-if (isProduction) {
-    try {
-        styles = require(`!raw-loader!../public/styles.css`)
-    } catch (e) {
-        console.log(e)
-    }
-}
-
 const HTML = ({ body, headComponents, postBodyComponents }) => {
     const helmet = Helmet.renderStatic()
 
@@ -98,12 +85,6 @@ const HTML = ({ body, headComponents, postBodyComponents }) => {
                 {headComponents}
                 {helmet.title.toComponent()}
                 {helmet.meta.toComponent()}
-                {styles && (
-                    <style
-                        id="gatsby-inlined-css"
-                        dangerouslySetInnerHTML={{ __html: styles }}
-                    />
-                )}
             </head>
 
             <body>
