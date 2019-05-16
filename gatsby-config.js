@@ -24,10 +24,10 @@ module.exports = {
             ],
         },
     },
-    
+
     proxy: {
-      prefix: "/api",
-      url: "https://lt-admin.ru"  
+        prefix: '/api',
+        url: 'https://lt-admin.ru',
     },
 
     plugins: [
@@ -107,7 +107,7 @@ module.exports = {
             resolve: `gatsby-plugin-sitemap`,
             options: {},
         },
-        // `gatsby-plugin-react-next`,
+        'gatsby-plugin-sharp',
         `gatsby-transformer-sharp`,
         {
             resolve: `gatsby-plugin-google-analytics`,
