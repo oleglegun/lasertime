@@ -18,6 +18,15 @@ function ArticleList({ data }) {
                 />
 
                 <div className="PageContent__wrapper">
+                <ArticlePreview
+                        title={'Революционные филлеры Neauvia Organic'}
+                        path={'/articles/neauvia-fillers/'}
+                        imageSizes={data.NeauviaFillersArticle.fluid}
+                        description={
+                            'Филлеры Neauvia Organic обладают революционно новыми возможностями по сравнению с препаратами гиалуроновой кислоты, которые применялись раньше в контурной пластике.'
+                        }
+                        type={'article'}
+                    />
                     <ArticlePreview
                         title={'Врач-косметолог – архитектор вашего лица!'}
                         path={'/articles/doctor-architect/'}
@@ -364,6 +373,13 @@ export const pageQuery = graphql`
             }
         }
         # Preview images
+        NeauviaFillersArticle: imageSharp(
+            fluid: { originalName: { regex: "/neauvia-fillers-article/" } }
+        ) {
+            fluid(maxWidth: 180) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
         ForeverYoungLiftingArticle: imageSharp(
             fluid: { originalName: { regex: "/forever-young-lifting-article/" } }
         ) {
