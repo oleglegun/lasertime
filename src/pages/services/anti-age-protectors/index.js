@@ -2008,6 +2008,155 @@ function AntiAgeProtectorsService({ data }) {
                     <p><b>Техника введения:</b> папульная, линейно-ретроградная, наппаж.</p>
                     <p><b>Результат:</b> Увлажнение, ревитализация, уплотнение кожи лица, шеи, зоны декольте и тела.
                         Стимуляция синтеза коллагена.</p>
+
+                        <Heading titleH3="NEAUVIA® Organic STIMULATE" type="box" />
+                <ImageContainer oneFourth>
+                    <Img sizes={data.neauviaStimulate.fluid} title="" alt="" />
+                </ImageContainer>
+                <p>
+                    <b>Форма выпуска:</b> 1 мл
+                </p>
+                <p>
+                    <b>Концентрация ГК:</b> 26 мг/мл, 0,01% гидроксиапатита кальция (CaHA), ретикулирующий агент PEG
+                </p>
+                <p>
+                    <b>Показания к применению:</b> Данный филлер идеален для людей 35-40 лет. Улучшает общее состояние дермы,
+                    восстанавливает объем и качество тканей особенно в средней и нижней трети лица, периоральной области, в зоне декольте,
+                    кистей рук.
+                </p>
+                <p>
+                    <b>Период полной биодеградации:</b> 12-18 месяцев
+                </p>
+
+                <Heading titleH3="NEAUVIA® Organic STIMULATE MAN" type="box" />
+                <ImageContainer oneFourth>
+                    <Img sizes={data.neauviaStimulateMan.fluid} title="" alt="" />
+                </ImageContainer>
+                <p>
+                    <b>Форма выпуска:</b> 1 мл
+                </p>
+                <p>
+                    <b>Концентрация ГК:</b> 28 мг/мл, 0,01% гидроксиапатита кальция (CaHA), ретикулирующий агент PEG
+                </p>
+                <p>
+                    <b>Показания к применению:</b> Филлер оказывает двойное направленное действие на клетки кожи – выполняет стандартную
+                    функцию дермального наполнителя и дополнительно стимулирует активизацию фибробластов для стимуляции выработки
+                    коллагена, улучшающего структуру мягких тканей.
+                </p>
+                <p>
+                    <b>Период полной биодеградации:</b> 12-18 месяцев
+                </p>
+
+                <Heading titleH3="NEAUVIA® Organic INTENSE RHEOLOGY" type="box" />
+                <ImageContainer oneFourth>
+                    <Img sizes={data.neauviaIntenseRheology.fluid} title="" alt="" />
+                </ImageContainer>
+                <p>
+                    <b>Форма выпуска:</b> 1 мл
+                </p>
+                <p>
+                    <b>Концентрация ГК:</b> 22 мг/мл, ретикулирующий агент PEG
+                </p>
+                <p>
+                    <b>Показания к применению:</b> Филлер отлично справляется с коррекцией первых признаков старения в молодом возрасте -
+                    тонкими поверхностными морщинами. Также используется для придания объема губам, коррекции контура губ, омоложения кожи
+                    рук, восстановления мягких тканей мочки уха, коррекции межбровных морщин.
+                </p>
+                <p>
+                    <b>Период полной биодеградации:</b> 6-9 месяцев
+                </p>
+
+                <Heading titleH3="NEAUVIA® Organic INTENSE LIPS" type="box" />
+                <ImageContainer oneFourth>
+                    <Img sizes={data.neauviaIntenseLips.fluid} title="" alt="" />
+                </ImageContainer>
+                <p>
+                    <b>Форма выпуска:</b> 1 мл
+                </p>
+                <p>
+                    <b>Концентрация ГК:</b> 24 мг/мл, ретикулирующий агент PEG.
+                </p>
+                <p>
+                    <b>Показания к применению:</b> Филлер предназначен специально для решения проблем в периоральной области. С
+                    использованием препарата решается проблема опущенных уголков губ и недостаток объема.
+                </p>
+                <p>
+                    <b>Период полной биодеградации:</b> 12 месяцев.
+                </p>
+
+                <Heading titleH3="NEAUVIA® Organic INTENSE LV" type="box" />
+                <ImageContainer oneFourth>
+                    <Img sizes={data.neauviaIntenseLv.fluid} title="" alt="" />
+                </ImageContainer>
+                <p>
+                    <b>Форма выпуска:</b> 1 мл
+                </p>
+                <p>
+                    <b>Концентрация ГК:</b> 26 мг/мл, ретикулирующий агент PEG.
+                </p>
+                <p>
+                    <b>Показания к применению:</b> Филлер средней плотности предназначен для разглаживания слабо выраженных морщин,
+                    коррекции контура губ и объема губ. Возможно использование для увлажнения кожи рук и стоп.
+                </p>
+                <p>
+                    <b>Период полной биодеградации:</b> 12-18 месяцев
+                </p>
+
+                <Heading titleH3="NEAUVIA® Organic INTENSE" type="box" />
+                <ImageContainer oneFourth>
+                    <Img sizes={data.neauviaIntense.fluid} title="" alt="" />
+                </ImageContainer>
+                <p>
+                    <b>Форма выпуска:</b> 1 мл
+                </p>
+                <p>
+                    <b>Концентрация ГК:</b> 28 мг/мл, 1% CaHA, ретикулирующий агент PEG
+                </p>
+                <p>
+                    <b>Показания к применению:</b> Плотный филлер предназначен для моделирования форм лица, например, восполнения объема
+                    скул, подтяжки контура, заполнения глубоких. Возможно имплантирование филлера в области интимных зон.{' '}
+                </p>
+                <p>
+                    <b>Период полной биодеградации:</b> 15-18 месяцев
+                </p>
+
+                <Heading titleH3="NEAUVIA® Organic INTENSE FLUX" type="box" />
+                <ImageContainer oneFourth>
+                    <Img sizes={data.neauviaIntenseFlux.fluid} title="" alt="" />
+                </ImageContainer>
+                <p>
+                    <b>Форма выпуска:</b> 1 мл
+                </p>
+                <p>
+                    <b>Концентрация ГК:</b>: 26 мг/мл, ретикулирующий агент PEG
+                </p>
+                <p>
+                    <b>Показания к применению:</b> Считается многозначным филлером, что позволяет проводить коррекцию в разных областях.
+                    Часто используется в области особо деликатных зон, таких как губы, шея и глаза.
+                </p>
+                <p>
+                    <b>Период полной биодеградации:</b> 8-12 месяцев
+                </p>
+
+                <Heading titleH3="NEAUVIA® Organic INTENSE MAN" type="box" />
+                <ImageContainer oneFourth>
+                    <Img sizes={data.neauviaIntenseMan.fluid} title="" alt="" />
+                </ImageContainer>
+                <p>Эксклюзивный препарат только для мужчин!</p>
+                <p>
+                    <b>Форма выпуска:</b> 1 мл
+                </p>
+                <p>
+                    <b>Концентрация ГК:</b> 28 мг/мл, ретикулирующий агент PEG
+                </p>
+                <p>
+                    <b>Показания к применению:</b> Филлер хорошо воздействует на более плотные дермальные покровы и реагирует на
+                    скоротечность естественного старения. Используется для объемного моделирования контуров лица, волюметрической коррекции
+                    верхней, средней и нижней третей лица, исправления кожных заломов.
+                </p>
+                <p>
+                    <b>Период полной биодеградации:</b> 8-12 месяцев
+                </p>
                 </CollapsiblePanel>
 
             </div>
@@ -2383,6 +2532,46 @@ export const pageQuery = graphql`
             }
         }
         neauviaHydroDeluxeMan: imageSharp(fluid: { originalName: { regex: "/neauvia-hydro-deluxe-man/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        neauviaStimulate: imageSharp(fluid: { originalName: { regex: "/neauvia-stimulate.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        neauviaStimulateMan: imageSharp(fluid: { originalName: { regex: "/neauvia-stimulate-man.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        neauviaIntenseRheology: imageSharp(fluid: { originalName: { regex: "/neauvia-intense-rheology.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        neauviaIntense: imageSharp(fluid: { originalName: { regex: "/neauvia-intense.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        neauviaIntenseMan: imageSharp(fluid: { originalName: { regex: "/neauvia-intense-man.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        neauviaIntenseLips: imageSharp(fluid: { originalName: { regex: "/neauvia-intense-lips.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        neauviaIntenseLv: imageSharp(fluid: { originalName: { regex: "/neauvia-intense-lv.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        neauviaIntenseFlux: imageSharp(fluid: { originalName: { regex: "/neauvia-intense-flux.jpg/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
