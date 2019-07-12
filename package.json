@@ -13,7 +13,7 @@
         "clean": "rm -r public/ .cache/",
         "deploy": "yarn run build && yarn run upload",
         "upload": "./scripts/upload-vscale.sh",
-        "develop": "gatsby develop",
+        "dev": "gatsby develop",
         "format": "prettier --config .prettierrc --write 'src/**/*.js'",
         "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
         "test": "echo \"Error: no test specified\" && exit 1"
