@@ -18,7 +18,16 @@ function ArticleList({ data }) {
                 />
 
                 <div className="PageContent__wrapper">
-                <ArticlePreview
+                    <ArticlePreview
+                        title={'Розацеа: причины, лечение и профилактика'}
+                        path={'/articles/rosacea/'}
+                        imageSizes={data.RosaceaArticle.fluid}
+                        description={
+                            'Розацеа (от лат. Acne rosacea - розовые угри на лице) – это очень распространённая патология кожи на сегодняшний день. Сегодня практически каждый 4-й имеет данную патологию на разных стадиях развития и разной степени тяжести.'
+                        }
+                        type={'article'}
+                    />
+                    <ArticlePreview
                         title={'Революционные филлеры Neauvia Organic'}
                         path={'/articles/neauvia-fillers/'}
                         imageSizes={data.NeauviaFillersArticle.fluid}
@@ -373,6 +382,13 @@ export const pageQuery = graphql`
             }
         }
         # Preview images
+        RosaceaArticle: imageSharp(
+            fluid: { originalName: { regex: "/rosacea-article/" } }
+        ) {
+            fluid(maxWidth: 180) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
         NeauviaFillersArticle: imageSharp(
             fluid: { originalName: { regex: "/neauvia-fillers-article/" } }
         ) {
