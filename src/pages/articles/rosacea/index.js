@@ -17,7 +17,7 @@ export default function RosaceaArticle({ data }) {
                 <Heading titleH1="Розацеа: причины, лечение и профилактика" type="underline" />
 
                 <FloatBlock>    
-                <Img sizes={data.rosaceaFaceBeforeAfter.fluid} title="Розацеа" alt="Розацеа" />
+                <Img sizes={data.rosaceaFaceBeforeAfter.fluid} title="Розацеа на лице" alt="девушка с розацеа на лице, до и после лечения" />
                 </FloatBlock>
                 <p>
                     Розацеа кожи (от лат. Acne rosacea - розовые угри на лице) – это очень распространённая патология кожи на сегодняшний
@@ -207,7 +207,7 @@ export default function RosaceaArticle({ data }) {
 
                 <Heading titleH1="Причины возникновения и развития розацеа" type="box" />
 
-                <Img sizes={data.rosaceaFace.fluid} title="" alt="" />
+                <Img sizes={data.rosaceaFace.fluid} title="Вид розацеа на лице" alt="Вид розацеа на лице человека" />
 
                 <p>
                     Даже сегодня сказать с полной уверенностью о причинах и механизмах возникновения розацеа, к сожалению, нельзя. Это
@@ -290,6 +290,7 @@ export default function RosaceaArticle({ data }) {
                 </List>
 
                 <Heading titleH1="Лечение розацеа" type="box" />
+                <Img sizes={data.rosaceaFaceBeforeAfterTreatment.fluid} title="Лечение розацеа" alt="девушка с розацеа на лице" />
                 <p>
                     Американское сообщество по проблемам акне и розацеа (American Acne & Rosacea Society, AARS) — одна из крупнейших
                     организаций, занимающихся проблемами розацеа. В июне 2019 AARS выпустило обновленные рекомендации по ведению пациентов с
@@ -537,7 +538,12 @@ export default function RosaceaArticle({ data }) {
 export const pageQuery = graphql`
     query RosaceaArticleQuery {
         ...Helmet
-        rosaceaFaceBeforeAfter: imageSharp(fluid: { originalName: { regex: "/rosacea-face-before-after/" } }) {
+        rosaceaFaceBeforeAfter: imageSharp(fluid: { originalName: { regex: "/rosacea-face-before-after.jpg/" } }) {
+            fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid_noBase64
+            }
+        }
+        rosaceaFaceBeforeAfterTreatment: imageSharp(fluid: { originalName: { regex: "/rosacea-face-before-after-treatment/" } }) {
             fluid(maxWidth: 960) {
                 ...GatsbyImageSharpFluid_noBase64
             }
