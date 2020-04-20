@@ -9,14 +9,14 @@ class PageFooter extends React.Component {
                         Лицензия на осуществление медицинской деятельности{' '}
                         <span style={{ whiteSpace: 'noWrap' }}>
                             <a
-                                href="/pdf/licence.pdf"
+                                href="/pdf/license.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                № ЛО-77-01-013289
+                                № ЛО-77-01-019977
                             </a>
                         </span>
-                        от 18.10.2016 г.
+                        <span> от 02.06.2020 г.</span>
                     </div>
                     <div className="PageFooter__warning">
                         Использовании любых материалов сайта без
@@ -24,7 +24,7 @@ class PageFooter extends React.Component {
                         запрещено.
                     </div>
                     <div className="PageFooter__copyright">
-                        © 2019 Клиника “Знак Качества”.
+                        © 2021 Клиника “Знак Качества”.
                         <span className="PageFooter__copyright-text">
                             Все авторские права защищены.
                         </span>

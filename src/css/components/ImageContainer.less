@@ -1,4 +1,4 @@
-@import "../variables";
+@import '../variables';
 
 .ImageContainer {
     margin: 0 auto;
@@ -8,42 +8,100 @@
     }
 
     &--one-third {
-        width: 75%;
+        width: 90%;
     }
 
     &--one-fourth {
-        width: 50%;
+        width: 90%;
     }
 
     &--size-auto {
         width: auto;
     }
 
+    &__caption {
+        font-style: italic;
+        font-size: @font-size--mobile * 0.9;
+
+        &--basic {
+            padding-top: 0.3em;
+            color: @gray-50;
+        }
+
+        &--gold {
+            margin-top: 0.3em;
+            padding: 0.2em 0.5em;
+            background-color: @gold-bg;
+
+            color: @gold-dark;
+        }
+
+        &--gray {
+            margin-top: 0.3em;
+            padding: 0.2em 0.5em;
+            background-color: @gray-95;
+
+            color: @gray-50;
+        }
+
+        &--gold-stencil {
+            margin-top: 0.3em;
+            padding: 0.2em 0.5em;
+            background-color: @gold-dark;
+
+            color: white;
+        }
+
+        &--gray-stencil {
+            margin-top: 0.3em;
+            padding: 0.2em 0.5em;
+            background-color: @gray-50;
+
+            color: white;
+        }
+    }
+
     @media @mobile-wide-widths {
         &--one-half {
-            width: 66%
+            width: 66%;
         }
 
         &--one-third {
-            width: 50%
+            width: 50%;
         }
 
         &--one-fourth {
-            width: 33%
+            width: 33%;
+        }
+
+        &--float-left {
+            float: left;
+
+            padding-top: 1em;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        &--float-right {
+            float: right;
+
+            padding-top: 1em;
+            padding-left: 1em;
+            padding-right: 1em;
         }
     }
 
     @media @tablet-widths {
         &--one-half {
-            width: 50%
+            width: 50%;
         }
 
         &--one-third {
-            width: 33%
+            width: 33%;
         }
 
         &--one-fourth {
-            width: 25%
+            width: 25%;
         }
     }
 }
