@@ -327,10 +327,10 @@ function ArticleList({ data }) {
                         type={'article'}
                     />
                     <ArticlePreview
-                        title={'Плазмолифтинг лица в Москве'}
-                        path={'/plazmolifting-moscow/'}
-                        imageSizes={data.plazmoliftingArticle.fluid}
-                        description={''}
+                        title={'Плазмотерапия лица в Москве'}
+                        path={'/articles/plazmotherapy-moscow/'}
+                        imageSizes={data.plazmotherapyArticle.fluid}
+                        description={'PRP-плазмотерапия является одной из самых новых, перспективных и недорогих методик омоложения лица. Это безоперационная процедура, основанная на использовании собственной плазмы пациента.'}
                         type={'article'}
                     />
                     <ArticlePreview
@@ -674,8 +674,8 @@ export const pageQuery = graphql`
             }
         }
 
-        plazmoliftingArticle: imageSharp(
-            fluid: { originalName: { regex: "/plazmolifting-article/" } }
+        plazmotherapyArticle: imageSharp(
+            fluid: { originalName: { regex: "/plazmotherapy-article/" } }
         ) {
             fluid(maxWidth: 180) {
                 ...GatsbyImageSharpFluid_noBase64

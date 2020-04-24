@@ -148,9 +148,9 @@ function PortnovaEkaterinaDoctor({data} ) {
                                 description='Сертификат по работе с космецевтикой "Holy Land"'
                             />
                             <TimelineItem
-                                date="2014 - 2017"
+                                date="2014 - 2021"
                                 name='Московский медицинский институт "Реавиз"'
-                                description="Обучение"
+                                description='Диплом по специальности "Лечебное Дело"'
                             />
                         </Timeline>
                     </div>
